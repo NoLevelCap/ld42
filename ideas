@@ -1,0 +1,64 @@
+Space on a computer harddrive -> Running out of space on a video camera - maybe the camera sees ghosts
+Binding of issac completly dark or
+ghosts you can see, but you can't see them whilst using the torch
+ghosts follow you through map
+
+ghosts attack camera memory
+
+ghosts shake objects around them
+
+Camera has fustrum to see ghosts
+
+Top Down character in middle -overlay with recording thing and time left with tape - night vision
+put shader on top of it
+
+When you have the torch you have the area around you where you can see the walls
+
+You have a map objective - Level based
+  -> Level one - house with three floors (excluding the attic) - come up with a stupid backstory as to why the house is haunted.
+    -> Objective: Go to attic get the bones and return them to the burial ground at the basement. Then escape.
+
+  avoid ghosts
+
+Add spooky sounds and get players to listen with headphones
+
+Ghost AI -->
+Timed movement Tick based
+If activated (within a few tiles)  Xcom style awakening animation
+If you're on the same floor it chases if activated
+If you're on another floor, it warps to assigned locations
+If its within 4/5 tiles it hangs back for 3 ticks and then charges
+
+Restricted to pokemon move style
+Camera and torch points to cursor
+WASD
+
+32x32px pixel graphics
+
+1280 x 960
+
+multiply map and player x2
+units size x2
+
+80s tape camera so house is in 80s
+
+
+40 tiles wide
+30 tiles high
+
+Jem and Jack's Todo ---
+[ ] - Design First Level
+[ ] - Create and load map data
+[ ] - Render map data
+[ ] - Player control
+[ ] - Collision
+[ ] - Rendering for the two different modes (Torch and Camera)
+[ ] - Ghost AI
+[ ] - Objectives
+[ ] - Create Menus
+
+Map Metadata ->
+
+
+
+
