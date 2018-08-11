@@ -11,14 +11,14 @@
     {
      "0":
         {
-         "Solid":true
+         "solid":true
         }
     },
  "tilepropertytypes":
     {
      "0":
         {
-         "Solid":"bool"
+         "solid":"bool"
         }
     },
  "tiles":

@@ -4,7 +4,7 @@ function onMapLoad(loader, resources){
   MapData = resources["Map"].data;
 
   var url = window.location.href + MapData.tilesets[0].source;
-  var filename = url.substring(url.lastIndexOf('/')+1, url.lastIndexOf('.')-1);
+  var filename = url.substring(url.lastIndexOf('/')+1, url.lastIndexOf('.'));
 
   loader
     .add("MapTilemapData", "data/maps/tilesets/"+filename+".json")

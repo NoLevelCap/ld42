@@ -6,6 +6,9 @@ function map() {
   this.mapdata = new Array();
   this.objdata = new Array();
   this.triggerdata = new Array();
+
+  this.ghosts = new Array();
+
   this.xshift = 0;
   this.yshift = 0;
 
@@ -84,6 +87,9 @@ function map() {
     _this.xshift = renderer.width/2 - MapData.tilewidth/2;
     _this.yshift = renderer.height/2 - MapData.tileheight/2;
     _this.position.set(_this.xshift, _this.yshift);
+
+    _this.ghostLayer = new Container();
+    _this.addChild(_this.ghostLayer);
   }
 
   this.changeFloor = function(floor) {
@@ -137,14 +143,18 @@ function map() {
   }
 
   this.checkTriggers = function(tile){
-    for (var i = 0; i < _this.triggerdata[_this.currentFloor].length; i++) {
-      if(!_this.triggerdata[_this.currentFloor][i].inactive){
-        var screenX = tile.x + tile.width/2;
-        var screenY = tile.y + tile.height/2;
-        var rect = _this.triggerdata[_this.currentFloor][i].bounds;
+    for (var triggerid in _this.triggerdata[_this.currentFloor]) {
+      if (_this.triggerdata[_this.currentFloor].hasOwnProperty(triggerid)) {
+        var trigger = _this.triggerdata[_this.currentFloor][triggerid];
 
-        if(rect.contains(screenX, screenY)){
-          _this.triggerdata[_this.currentFloor][i].trigger();
+        if(!trigger.objData.inactive){
+          var screenX = tile.x + tile.width/2;
+          var screenY = tile.y + tile.height/2;
+          var rect = trigger.bounds;
+
+          if(rect.contains(screenX, screenY)){
+            trigger.trigger();
+          }
         }
       }
     }

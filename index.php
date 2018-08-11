@@ -12,6 +12,7 @@
 
   <script src="js/alias.js"></script>
 
+  <script src="js/ghost.js"></script>
   <script src="js/overlay.js"></script>
   <script src="js/gamemanager.js"></script>
   <script src="js/player.js"></script>
