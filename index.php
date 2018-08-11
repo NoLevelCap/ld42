@@ -2,7 +2,7 @@
   <meta charset="utf-8">
 
 
-  <title>Starbug</title>
+  <title>Ship</title>
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -11,6 +11,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.min.js"></script><!--Howler Sound Engine-->
 
   <script src="js/alias.js"></script>
+
+  <script src="js/gamemanager.js"></script>
+  <script src="js/player.js"></script>
   <script src="js/map/maploader.js"></script>
   <script src="js/map/map.js"></script>
   <!--<script src="js/loader.js"></script>-->

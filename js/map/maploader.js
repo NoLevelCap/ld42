@@ -1,5 +1,4 @@
 var MapData, MapTilemapData, TilemapBaseImg, MapImg;
-var CurrentMap;
 
 function onMapLoad(loader, resources){
   MapData = resources["Map"].data;
@@ -20,8 +19,10 @@ function onMapLoad(loader, resources){
     }
   }
 
-  CurrentMap = new map();
-  stage.addChild(CurrentMap);
+  GAMEMANAGER.Map = new map();
+  stage.addChild(GAMEMANAGER.Map);
+
+  state = GAMEMANAGER.onMapLoad;
 }
 
 function loadMap(mapname){

@@ -7,22 +7,21 @@ document.body.appendChild(renderer.view);
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 loader
-  //.add("img/packed/main.json")
+  .add("img/packed.json")
   .load(setup);
 
 //Define any variables that are used in more than one function
 var Tex_Main, state = failed;
 var SOUNDMANAGER, GAMEMANAGER;
 function setup() {
-  state = temp;
 
-  //GAMEMANAGER = new gameManager();
 
   //SOUNDMANAGER = new SoundManager();
 
-  //Tex_Main = PIXI.loader.resources["img/packed/main.json"].textures;
+  Tex_Main = PIXI.loader.resources["img/packed.json"].textures;
 
-  loadMap("testmap");
+  GAMEMANAGER = new gamemanager();
+  state = GAMEMANAGER.maingameinit;
 
   //Start the game loop
   gameLoop();

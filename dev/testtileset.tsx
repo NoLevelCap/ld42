@@ -3,7 +3,7 @@
  <image source="../img/maps/testmap.png" width="256" height="32"/>
  <tile id="0">
   <properties>
-   <property name="Solid" type="bool" value="false"/>
+   <property name="Solid" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index">
    <object id="1" x="-17" y="-38.5" width="90.25" height="135.5"/>

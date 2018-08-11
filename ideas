@@ -48,17 +48,18 @@ units size x2
 
 Jem and Jack's Todo ---
 [ ] - Design First Level
-[ ] - Create and load map data
-[ ] - Render map data
-[ ] - Player control
-[ ] - Collision
+[X] - Create and load map data
+[X] - Render map data
+[X] - Player control
+[X] - Collision
 [ ] - Rendering for the two different modes (Torch and Camera)
 [ ] - Ghost AI
 [ ] - Objectives
 [ ] - Create Menus
+[ ] - Move transitions
+[ ] - Deal with Input delay
+[ ] - Add Strafing
 
 Map Metadata ->
 
-
-
-
+Any post cemented Ideas ->
