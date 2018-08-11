@@ -10,15 +10,23 @@ function gamemanager() {
   this.maingameinit = function(){
     state = _this.maingameloading;
 
+    _this.gameContainer = new Container();
+    stage.addChild(_this.gameContainer);
+    _this.uiContainer = new Container();
+    stage.addChild(_this.uiContainer);
+
     loadMap("testmap");
   }
 
   this.onMapLoad = function(){
     state = _this.maingame;
-
+    
     _this.player = new player();
     _this.player.setPosition(MapData.properties.SpawnX,MapData.properties.SpawnY);
-    stage.addChild(_this.player);
+    _this.gameContainer.addChild(_this.player);
+
+    _this.overlay = new overlay();
+    _this.uiContainer.addChild(_this.overlay);
   }
 
   this.maingameloading = function(){

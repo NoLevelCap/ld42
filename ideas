@@ -52,13 +52,15 @@ Jem and Jack's Todo ---
 [X] - Render map data
 [X] - Player control
 [X] - Collision
-[ ] - Rendering for the two different modes (Torch and Camera)
+[X] - Rendering for the two different modes (Torch and Camera)
+[ ] - Object Rendering
 [ ] - Ghost AI
 [ ] - Objectives
 [ ] - Create Menus
 [ ] - Move transitions
 [ ] - Deal with Input delay
 [ ] - Add Strafing
+[ ] - Draw and add to modes to make them feel real
 
 Map Metadata ->
 

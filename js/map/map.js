@@ -35,9 +35,6 @@ function map() {
   }
 
   this.checkCollision = function(x,y) {
-    Console.log(x + "/" + y);
-    Console.log(_this.mapdata[_this.currentFloor][x][y]);
-    Console.log(_this.mapdata[_this.currentFloor][x][y].tileData);
     return _this.mapdata[_this.currentFloor][x][y].tileData.Solid;
   }
 

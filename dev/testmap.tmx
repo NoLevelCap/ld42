@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="3">
  <properties>
-  <property name="SpawnX" type="int" value="12"/>
-  <property name="SpawnY" type="int" value="42"/>
+  <property name="SpawnX" type="int" value="50"/>
+  <property name="SpawnY" type="int" value="85"/>
  </properties>
  <tileset firstgid="1" source="testtileset.tsx"/>
  <group name="Ground Floor">

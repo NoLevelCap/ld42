@@ -20,7 +20,7 @@ function onMapLoad(loader, resources){
   }
 
   GAMEMANAGER.Map = new map();
-  stage.addChild(GAMEMANAGER.Map);
+  GAMEMANAGER.gameContainer.addChild(GAMEMANAGER.Map);
 
   state = GAMEMANAGER.onMapLoad;
 }

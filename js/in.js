@@ -6,6 +6,7 @@ document.body.appendChild(renderer.view);
 
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
+
 loader
   .add("img/packed.json")
   .load(setup);

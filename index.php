@@ -12,8 +12,10 @@
 
   <script src="js/alias.js"></script>
 
+  <script src="js/overlay.js"></script>
   <script src="js/gamemanager.js"></script>
   <script src="js/player.js"></script>
+  
   <script src="js/map/maploader.js"></script>
   <script src="js/map/map.js"></script>
   <!--<script src="js/loader.js"></script>-->
