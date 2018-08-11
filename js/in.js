@@ -1,31 +1,29 @@
 //Create a Pixi stage and renderer and add the
 //renderer.view to the DOM
 var stage = new Container(),
-    renderer = autoDetectRenderer(640, 320, {resolution: 2, antialias:false});
+    renderer = autoDetectRenderer(1280, 960, {resolution: 1, antialias:false});
 document.body.appendChild(renderer.view);
 
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
+
 loader
-  .add("img/packed/main.json")
-  .add("Dialogue", "data/Dialogue.json")
+  .add("img/packed.json")
   .load(setup);
 
 //Define any variables that are used in more than one function
-var Tex_Main, Dialogue, state = failed;
+var Tex_Main, state = failed;
 var SOUNDMANAGER, GAMEMANAGER;
 function setup() {
-  state = initTravelScreen;
 
-  GAMEMANAGER = new gameManager();
 
   //SOUNDMANAGER = new SoundManager();
 
-  Tex_Main = PIXI.loader.resources["img/packed/main.json"].textures;
+  Tex_Main = PIXI.loader.resources["img/packed.json"].textures;
 
-  Dialogue = PIXI.loader.resources["Dialogue"].data;
-  //get the stage details
-  Console.log(stage);
+  GAMEMANAGER = new gamemanager();
+  state = GAMEMANAGER.maingameinit;
+
   //Start the game loop
   gameLoop();
 }
@@ -39,6 +37,10 @@ function gameLoop(){
   renderer.render(stage);
 }
 
+function temp() {
+}
+
 function failed() {
   console.log("Error Found in State Path");
+  state = temp;
 }
