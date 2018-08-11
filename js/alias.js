@@ -9,6 +9,7 @@ var Container = PIXI.Container,
     Polygon = PIXI.Polygon,
     debug = new Debug(true),
     Debug = debug,
+    sharedticker = PIXI.ticker.shared,
     Console = console,
     DEG2RAD = 0.01745329251;
 
