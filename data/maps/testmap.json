@@ -13,22 +13,22 @@
                  "width":100,
                  "x":0,
                  "y":0
-                }, 
+                },
                 {
                  "draworder":"topdown",
                  "name":"Object Layer 1",
                  "objects":[
                         {
                          "gid":2,
-                         "height":208.666666666667,
+                         "height":208.667,
                          "id":1,
                          "name":"",
                          "rotation":5,
                          "type":"",
                          "visible":true,
-                         "width":197.666666666667,
+                         "width":197.667,
                          "x":1673,
-                         "y":2069.33333333333
+                         "y":2069.33
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -47,13 +47,13 @@
  "orientation":"orthogonal",
  "properties":
     {
-     "SpawnX":50,
-     "SpawnY":85
+     "spawnX":50,
+     "spawnY":85
     },
  "propertytypes":
     {
-     "SpawnX":"int",
-     "SpawnY":"int"
+     "spawnX":"int",
+     "spawnY":"int"
     },
  "renderorder":"right-down",
  "tiledversion":"1.1.6",
@@ -61,7 +61,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/..\/dev\/testtileset.tsx"
+         "source":"..\/..\/dev\/testmap.tsx"
         }],
  "tilewidth":32,
  "type":"map",
