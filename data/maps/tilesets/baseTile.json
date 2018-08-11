@@ -1,37 +1,167 @@
-{ "columns":10,
+{ "columns":20,
  "image":"..\/..\/..\/img\/maps\/test1.png",
- "imageheight":320,
- "imagewidth":320,
+ "imageheight":640,
+ "imagewidth":640,
  "margin":0,
  "name":"baseTiles",
  "spacing":0,
- "tilecount":100,
+ "tilecount":400,
  "tileheight":32,
  "tileproperties":
     {
-     "14":
+     "103":
         {
          "solid":true
         },
-     "15":
+     "104":
         {
          "solid":true
         },
-     "16":
+     "105":
         {
          "solid":true
         },
-     "17":
+     "106":
+        {
+         "item":true,
+         "name":"key_blue"
+        },
+     "107":
         {
          "solid":true
         },
-     "18":
+     "108":
         {
          "solid":true
         },
-     "24":
+     "109":
         {
          "solid":true
+        },
+     "121":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "122":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "123":
+        {
+         "solid":true
+        },
+     "124":
+        {
+         "solid":true
+        },
+     "125":
+        {
+         "solid":true
+        },
+     "126":
+        {
+         "solid":true
+        },
+     "127":
+        {
+         "solid":true
+        },
+     "142":
+        {
+         "colour":"red",
+         "solid":true,
+         "type":"door"
+        },
+     "143":
+        {
+         "item":true,
+         "name":"key_red"
+        },
+     "144":
+        {
+         "solid":true
+        },
+     "145":
+        {
+         "solid":true
+        },
+     "146":
+        {
+         "solid":true
+        },
+     "147":
+        {
+         "solid":true
+        },
+     "148":
+        {
+         "solid":true
+        },
+     "160":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "161":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "162":
+        {
+         "colour":"green",
+         "solid":true,
+         "type":"door"
+        },
+     "163":
+        {
+         "item":true,
+         "name":"key_green"
+        },
+     "164":
+        {
+         "solid":true
+        },
+     "165":
+        {
+         "solid":true
+        },
+     "166":
+        {
+         "solid":true
+        },
+     "167":
+        {
+         "solid":true
+        },
+     "180":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "181":
+        {
+         "toFloor":"",
+         "type":"stairs"
+        },
+     "182":
+        {
+         "solid":true
+        },
+     "184":
+        {
+         "solid":true
+        },
+     "185":
+        {
+         "item":true,
+         "name":"skull"
+        },
+     "186":
+        {
+         "type":"grave"
         },
      "25":
         {
@@ -49,50 +179,6 @@
         {
          "solid":true
         },
-     "29":
-        {
-         "solid":true
-        },
-     "30":
-        {
-         "solid":true
-        },
-     "31":
-        {
-         "solid":true
-        },
-     "32":
-        {
-         "solid":true
-        },
-     "37":
-        {
-         "solid":true
-        },
-     "38":
-        {
-         "solid":true
-        },
-     "39":
-        {
-         "solid":true
-        },
-     "40":
-        {
-         "solid":true
-        },
-     "41":
-        {
-         "solid":true
-        },
-     "42":
-        {
-         "solid":true
-        },
-     "43":
-        {
-         "solid":true
-        },
      "44":
         {
          "solid":true
@@ -103,11 +189,13 @@
         },
      "46":
         {
-         "colour":"blue",
-         "solid":true,
-         "type":"door"
+         "solid":true
         },
      "47":
+        {
+         "solid":true
+        },
+     "48":
         {
          "solid":true
         },
@@ -119,62 +207,19 @@
         {
          "solid":true
         },
-     "53":
-        {
-         "solid":true
-        },
-     "54":
-        {
-         "solid":true
-        },
-     "55":
-        {
-         "solid":true
-        },
-     "56":
-        {
-         "colour":"blue",
-         "type":"key"
-        },
-     "57":
-        {
-         "solid":true
-        },
-     "58":
-        {
-         "solid":true
-        },
-     "59":
-        {
-         "solid":true
-        },
      "6":
+        {
+         "solid":true
+        },
+     "60":
         {
          "solid":true
         },
      "61":
         {
-         "toFloor":"",
-         "type":"stairs"
+         "solid":true
         },
      "62":
-        {
-         "toFloor":"",
-         "type":"stairs"
-        },
-     "63":
-        {
-         "solid":true
-        },
-     "64":
-        {
-         "solid":true
-        },
-     "65":
-        {
-         "solid":true
-        },
-     "66":
         {
          "solid":true
         },
@@ -182,34 +227,15 @@
         {
          "solid":true
         },
+     "68":
+        {
+         "solid":true
+        },
+     "69":
+        {
+         "solid":true
+        },
      "7":
-        {
-         "solid":true
-        },
-     "72":
-        {
-         "colour":"red",
-         "solid":true,
-         "type":"door"
-        },
-     "73":
-        {
-         "colour":"red",
-         "type":"key"
-        },
-     "74":
-        {
-         "solid":true
-        },
-     "75":
-        {
-         "solid":true
-        },
-     "76":
-        {
-         "solid":true
-        },
-     "77":
         {
          "solid":true
         },
@@ -219,24 +245,19 @@
         },
      "80":
         {
-         "toFloor":"",
-         "type":"stairs"
+         "solid":true
         },
      "81":
         {
-         "toFloor":"",
-         "type":"stairs"
+         "solid":true
         },
      "82":
         {
-         "colour":"green",
-         "solid":true,
-         "type":"door"
+         "solid":true
         },
      "83":
         {
-         "colour":"green",
-         "type":"key"
+         "solid":true
         },
      "84":
         {
@@ -246,46 +267,180 @@
         {
          "solid":true
         },
-     "9":
+     "86":
+        {
+         "colour":"blue",
+         "solid":true,
+         "type":"door"
+        },
+     "87":
         {
          "solid":true
         },
-     "90":
+     "89":
         {
-         "toFloor":"",
-         "type":"stairs"
+         "solid":true
         },
-     "91":
+     "9":
         {
-         "toFloor":"",
-         "type":"stairs"
+         "solid":true
         }
     },
  "tilepropertytypes":
     {
-     "14":
+     "103":
         {
          "solid":"bool"
         },
-     "15":
+     "104":
         {
          "solid":"bool"
         },
-     "16":
+     "105":
         {
          "solid":"bool"
         },
-     "17":
+     "106":
+        {
+         "item":"bool",
+         "name":"string"
+        },
+     "107":
         {
          "solid":"bool"
         },
-     "18":
+     "108":
         {
          "solid":"bool"
         },
-     "24":
+     "109":
         {
          "solid":"bool"
+        },
+     "121":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "122":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "123":
+        {
+         "solid":"bool"
+        },
+     "124":
+        {
+         "solid":"bool"
+        },
+     "125":
+        {
+         "solid":"bool"
+        },
+     "126":
+        {
+         "solid":"bool"
+        },
+     "127":
+        {
+         "solid":"bool"
+        },
+     "142":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "143":
+        {
+         "item":"bool",
+         "name":"string"
+        },
+     "144":
+        {
+         "solid":"bool"
+        },
+     "145":
+        {
+         "solid":"bool"
+        },
+     "146":
+        {
+         "solid":"bool"
+        },
+     "147":
+        {
+         "solid":"bool"
+        },
+     "148":
+        {
+         "solid":"bool"
+        },
+     "160":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "161":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "162":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "163":
+        {
+         "item":"bool",
+         "name":"string"
+        },
+     "164":
+        {
+         "solid":"bool"
+        },
+     "165":
+        {
+         "solid":"bool"
+        },
+     "166":
+        {
+         "solid":"bool"
+        },
+     "167":
+        {
+         "solid":"bool"
+        },
+     "180":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "181":
+        {
+         "toFloor":"string",
+         "type":"string"
+        },
+     "182":
+        {
+         "solid":"bool"
+        },
+     "184":
+        {
+         "solid":"bool"
+        },
+     "185":
+        {
+         "item":"bool",
+         "name":"string"
+        },
+     "186":
+        {
+         "type":"string"
         },
      "25":
         {
@@ -303,50 +458,6 @@
         {
          "solid":"bool"
         },
-     "29":
-        {
-         "solid":"bool"
-        },
-     "30":
-        {
-         "solid":"bool"
-        },
-     "31":
-        {
-         "solid":"bool"
-        },
-     "32":
-        {
-         "solid":"bool"
-        },
-     "37":
-        {
-         "solid":"bool"
-        },
-     "38":
-        {
-         "solid":"bool"
-        },
-     "39":
-        {
-         "solid":"bool"
-        },
-     "40":
-        {
-         "solid":"bool"
-        },
-     "41":
-        {
-         "solid":"bool"
-        },
-     "42":
-        {
-         "solid":"bool"
-        },
-     "43":
-        {
-         "solid":"bool"
-        },
      "44":
         {
          "solid":"bool"
@@ -357,11 +468,13 @@
         },
      "46":
         {
-         "colour":"string",
-         "solid":"bool",
-         "type":"string"
+         "solid":"bool"
         },
      "47":
+        {
+         "solid":"bool"
+        },
+     "48":
         {
          "solid":"bool"
         },
@@ -373,62 +486,19 @@
         {
          "solid":"bool"
         },
-     "53":
-        {
-         "solid":"bool"
-        },
-     "54":
-        {
-         "solid":"bool"
-        },
-     "55":
-        {
-         "solid":"bool"
-        },
-     "56":
-        {
-         "colour":"string",
-         "type":"string"
-        },
-     "57":
-        {
-         "solid":"bool"
-        },
-     "58":
-        {
-         "solid":"bool"
-        },
-     "59":
-        {
-         "solid":"bool"
-        },
      "6":
+        {
+         "solid":"bool"
+        },
+     "60":
         {
          "solid":"bool"
         },
      "61":
         {
-         "toFloor":"string",
-         "type":"string"
+         "solid":"bool"
         },
      "62":
-        {
-         "toFloor":"string",
-         "type":"string"
-        },
-     "63":
-        {
-         "solid":"bool"
-        },
-     "64":
-        {
-         "solid":"bool"
-        },
-     "65":
-        {
-         "solid":"bool"
-        },
-     "66":
         {
          "solid":"bool"
         },
@@ -436,34 +506,15 @@
         {
          "solid":"bool"
         },
+     "68":
+        {
+         "solid":"bool"
+        },
+     "69":
+        {
+         "solid":"bool"
+        },
      "7":
-        {
-         "solid":"bool"
-        },
-     "72":
-        {
-         "colour":"string",
-         "solid":"bool",
-         "type":"string"
-        },
-     "73":
-        {
-         "colour":"string",
-         "type":"string"
-        },
-     "74":
-        {
-         "solid":"bool"
-        },
-     "75":
-        {
-         "solid":"bool"
-        },
-     "76":
-        {
-         "solid":"bool"
-        },
-     "77":
         {
          "solid":"bool"
         },
@@ -473,24 +524,19 @@
         },
      "80":
         {
-         "toFloor":"string",
-         "type":"string"
+         "solid":"bool"
         },
      "81":
         {
-         "toFloor":"string",
-         "type":"string"
+         "solid":"bool"
         },
      "82":
         {
-         "colour":"string",
-         "solid":"bool",
-         "type":"string"
+         "solid":"bool"
         },
      "83":
         {
-         "colour":"string",
-         "type":"string"
+         "solid":"bool"
         },
      "84":
         {
@@ -500,19 +546,23 @@
         {
          "solid":"bool"
         },
-     "9":
+     "86":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "87":
         {
          "solid":"bool"
         },
-     "90":
+     "89":
         {
-         "toFloor":"string",
-         "type":"string"
+         "solid":"bool"
         },
-     "91":
+     "9":
         {
-         "toFloor":"string",
-         "type":"string"
+         "solid":"bool"
         }
     },
  "tilewidth":32,

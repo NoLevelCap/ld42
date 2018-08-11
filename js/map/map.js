@@ -86,6 +86,12 @@ function map() {
     _this.position.set(_this.xshift, _this.yshift);
   }
 
+  this.changeFloor = function(floor) {
+    _this.floors[_this.currentFloor].visible = false;
+    _this.currentFloor = floor;
+    _this.floors[_this.currentFloor].visible = true;
+  }
+
   this.checkCollision = function(x,y) {
     var tile = _this.mapdata[_this.currentFloor][x][y];
 
@@ -99,18 +105,33 @@ function map() {
 
     for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
       var obj = _this.objdata[_this.currentFloor][i];
+
+      var screenX = tile.x + tile.width/2 + _this.position.x;
+      var screenY = tile.y + tile.height/2 + _this.position.y;
+
+      //console.log(screenX, screenY);
+      //console.log(obj.Sprite.vertexData);
+
+      if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
+        if (obj.tileData.item) {
+          GAMEMANAGER.player.addItem(obj.tileData.name);
+          console.log(GAMEMANAGER.player.inventory);
+          _this.objdata[_this.currentFloor][i].remove();
+          _this.objdata[_this.currentFloor].splice(i, 1);
+        }
+        if (obj.tileData.type == "stairs") {
+          _this.changeFloor(obj.objData.toFloor);
+        }
         if(obj.tileData.solid){
-
-          var screenX = tile.x + tile.width/2 + _this.position.x;
-          var screenY = tile.y + tile.height/2 + _this.position.y;
-
-          //console.log(screenX, screenY);
-          //console.log(obj.Sprite.vertexData);
-
-          if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
-            return true;
+          objCollision = true;
+          if (obj.tileData.type == "door") {
+            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+              objCollision = false;
+            }
           }
         }
+      }
+
     }
     return objCollision;
   }
@@ -181,6 +202,10 @@ function mapObject(gid, objData) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
+  }
+
+  this.remove = function() {
+    _this.destroy();
   }
 
   Container.call( this );
