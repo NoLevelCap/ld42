@@ -53,7 +53,7 @@ Jem and Jack's Todo ---
 [X] - Player control
 [X] - Collision
 [X] - Rendering for the two different modes (Torch and Camera)
-[ ] - Object Rendering
+[X] - Object Rendering
 [ ] - Ghost AI
 [ ] - Objectives
 [ ] - Create Menus

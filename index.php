@@ -15,9 +15,13 @@
   <script src="js/overlay.js"></script>
   <script src="js/gamemanager.js"></script>
   <script src="js/player.js"></script>
-  
+
   <script src="js/map/maploader.js"></script>
   <script src="js/map/map.js"></script>
+  <script src="js/map/trigger.js"></script>
+
+  <script src="js/utils/shape.js"></script>
+  <script src="js/utils/rectangle.js"></script>
   <!--<script src="js/loader.js"></script>-->
 
 

@@ -2,6 +2,17 @@ var MapData, MapTilemapData, TilemapBaseImg, MapImg;
 
 function onMapLoad(loader, resources){
   MapData = resources["Map"].data;
+
+  var url = window.location.href + MapData.tilesets[0].source;
+  var filename = url.substring(url.lastIndexOf('/')+1, url.lastIndexOf('.')-1);
+
+  loader
+    .add("MapTilemapData", "data/maps/tilesets/"+filename+".json")
+    .add("TilemapImg", "img/maps/"+filename+".png")
+    .load(onTileSetLoad);
+}
+
+function onTileSetLoad(loader, resources){
   MapTilemapData = resources["MapTilemapData"].data;
   TilemapBaseImg = PIXI.BaseTexture.fromImage(resources["TilemapImg"].url);
 
@@ -28,7 +39,5 @@ function onMapLoad(loader, resources){
 function loadMap(mapname){
   loader
   .add("Map", "data/maps/"+mapname+".json")
-  .add("MapTilemapData", "data/maps/tilesets/"+mapname+".json")
-  .add("TilemapImg", "img/maps/"+mapname+".png")
   .load(onMapLoad);
 }

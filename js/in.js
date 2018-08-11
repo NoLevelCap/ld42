@@ -4,7 +4,7 @@ var stage = new Container(),
     renderer = autoDetectRenderer(1280, 960, {resolution: 1, antialias:false});
 document.body.appendChild(renderer.view);
 
-PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+//PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 
 loader
@@ -12,7 +12,7 @@ loader
   .load(setup);
 
 //Define any variables that are used in more than one function
-var Tex_Main, state = failed;
+var Tex_Main, state = failed, TRIGGERS;
 var SOUNDMANAGER, GAMEMANAGER;
 function setup() {
 
@@ -23,6 +23,8 @@ function setup() {
 
   GAMEMANAGER = new gamemanager();
   state = GAMEMANAGER.maingameinit;
+
+  TRIGGERS = new triggerCode();
 
   //Start the game loop
   gameLoop();

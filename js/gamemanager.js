@@ -15,14 +15,14 @@ function gamemanager() {
     _this.uiContainer = new Container();
     stage.addChild(_this.uiContainer);
 
-    loadMap("testmap");
+    loadMap("test2");
   }
 
   this.onMapLoad = function(){
     state = _this.maingame;
-    
+
     _this.player = new player();
-    _this.player.setPosition(MapData.properties.SpawnX,MapData.properties.SpawnY);
+    _this.player.setPosition(MapData.properties.spawnX,MapData.properties.spawnY);
     _this.gameContainer.addChild(_this.player);
 
     _this.overlay = new overlay();
