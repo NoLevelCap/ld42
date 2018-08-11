@@ -1,5 +1,5 @@
 { "columns":10,
- "image":"textures\/tileset1.png",
+ "image":"..\/..\/..\/img\/maps\/test1.png",
  "imageheight":320,
  "imagewidth":320,
  "margin":0,
@@ -174,7 +174,42 @@
         {
          "solid":true
         },
+     "66":
+        {
+         "solid":true
+        },
+     "67":
+        {
+         "solid":true
+        },
      "7":
+        {
+         "solid":true
+        },
+     "72":
+        {
+         "colour":"red",
+         "solid":true,
+         "type":"door"
+        },
+     "73":
+        {
+         "colour":"red",
+         "type":"key"
+        },
+     "74":
+        {
+         "solid":true
+        },
+     "75":
+        {
+         "solid":true
+        },
+     "76":
+        {
+         "solid":true
+        },
+     "77":
         {
          "solid":true
         },
@@ -191,6 +226,25 @@
         {
          "toFloor":"",
          "type":"stairs"
+        },
+     "82":
+        {
+         "colour":"green",
+         "solid":true,
+         "type":"door"
+        },
+     "83":
+        {
+         "colour":"green",
+         "type":"key"
+        },
+     "84":
+        {
+         "solid":true
+        },
+     "85":
+        {
+         "solid":true
         },
      "9":
         {
@@ -374,7 +428,42 @@
         {
          "solid":"bool"
         },
+     "66":
+        {
+         "solid":"bool"
+        },
+     "67":
+        {
+         "solid":"bool"
+        },
      "7":
+        {
+         "solid":"bool"
+        },
+     "72":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "73":
+        {
+         "colour":"string",
+         "type":"string"
+        },
+     "74":
+        {
+         "solid":"bool"
+        },
+     "75":
+        {
+         "solid":"bool"
+        },
+     "76":
+        {
+         "solid":"bool"
+        },
+     "77":
         {
          "solid":"bool"
         },
@@ -391,6 +480,25 @@
         {
          "toFloor":"string",
          "type":"string"
+        },
+     "82":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "83":
+        {
+         "colour":"string",
+         "type":"string"
+        },
+     "84":
+        {
+         "solid":"bool"
+        },
+     "85":
+        {
+         "solid":"bool"
         },
      "9":
         {

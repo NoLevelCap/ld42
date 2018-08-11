@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="baseTiles" tilewidth="32" tileheight="32" tilecount="100" columns="10">
- <image source="../img/maps/test1.png" width="320" height="320"/>
+ <image source="../img/maps/baseTile.png" width="320" height="320"/>
  <tile id="5">
   <properties>
    <property name="solid" type="bool" value="true"/>
