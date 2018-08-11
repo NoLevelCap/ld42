@@ -4,6 +4,7 @@ function player() {
   _this.mapx;
   _this.mapy;
   _this.facing;
+  _this.inventory = new Array();
 
   this.init = function(){
     _this.Sprite = new Sprite(Tex_Main['player.png']);
@@ -91,6 +92,19 @@ function player() {
     if(!(GAMEMANAGER.Map.checkCollision(_this.mapx + dx, _this.mapy + dy))){
       _this.setPosition(_this.mapx + dx, _this.mapy + dy);
     }
+  }
+
+  this.addItem = function(id) {
+    _this.inventory.push(id);
+  }
+
+  this.checkInventory = function(id) {
+    for (var i = 0; i < _this.inventory.length; i++) {
+      if (_this.inventory[i] == id) {
+        return true;
+      }
+    }
+    return false;
   }
 
   Container.call( this );

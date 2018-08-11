@@ -170,8 +170,8 @@
  </tile>
  <tile id="106">
   <properties>
-   <property name="colour" value="blue"/>
-   <property name="type" value="key"/>
+   <property name="item" type="bool" value="true"/>
+   <property name="name" value="key_blue"/>
   </properties>
  </tile>
  <tile id="107">
@@ -235,8 +235,8 @@
  </tile>
  <tile id="143">
   <properties>
-   <property name="colour" value="red"/>
-   <property name="type" value="key"/>
+   <property name="item" type="bool" value="true"/>
+   <property name="name" value="key_red"/>
   </properties>
  </tile>
  <tile id="144">
@@ -285,8 +285,8 @@
  </tile>
  <tile id="163">
   <properties>
-   <property name="colour" value="green"/>
-   <property name="type" value="key"/>
+   <property name="item" type="bool" value="true"/>
+   <property name="name" value="key_green"/>
   </properties>
  </tile>
  <tile id="164">
@@ -333,7 +333,8 @@
  </tile>
  <tile id="185">
   <properties>
-   <property name="type" value="skull"/>
+   <property name="item" type="bool" value="true"/>
+   <property name="name" value="skull"/>
   </properties>
  </tile>
  <tile id="186">

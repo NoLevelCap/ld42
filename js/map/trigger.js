@@ -17,4 +17,7 @@ function triggerCode(){
     newGhost.position.set(ghostSpawnTrigger.x + ghostSpawnTrigger.width/2, ghostSpawnTrigger.y + ghostSpawnTrigger.height/2);
     GAMEMANAGER.Map.ghostLayer.addChild(newGhost);
   };
+  this.ghostSpawn = function(trigger){
+    
+  }
 }
