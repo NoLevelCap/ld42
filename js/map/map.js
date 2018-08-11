@@ -23,6 +23,7 @@ function map() {
         Console.log(layername + " loading layer " + b);
         tiles = layer.layers[b];
 
+        _this.floors[layername].ghostLayer = new Container();
 
 
         if(tiles.type == "tilelayer"){
@@ -68,11 +69,13 @@ function map() {
               tiles.objects[z].x, tiles.objects[z].y,
               tiles.objects[z].width, tiles.objects[z].height,
               tiles.objects[z].properties, tiles.objects[z].name,
-              tiles.objects[z].id);
+              tiles.objects[z].id, layername);
           }
 
           Console.log("Trigger Group Loaded: " + tiles.name);
         }
+
+      _this.floors[layername].addChild(_this.floors[layername].ghostLayer);
 
       _this.floors[layername].visible = false;
       _this.addChild(_this.floors[layername]);
@@ -88,8 +91,7 @@ function map() {
     _this.yshift = renderer.height/2 - MapData.tileheight/2;
     _this.position.set(_this.xshift, _this.yshift);
 
-    _this.ghostLayer = new Container();
-    _this.addChild(_this.ghostLayer);
+
   }
 
   this.changeFloor = function(floor) {
@@ -226,7 +228,7 @@ function mapObject(gid, objData) {
 
 mapObject.prototype = Object.create(Container.prototype);
 
-function triggerObject(x, y, width, height, objData, name, id) {
+function triggerObject(x, y, width, height, objData, name, id, floor) {
   var _this = this;
 
   _this.triggered = false;
@@ -236,6 +238,8 @@ function triggerObject(x, y, width, height, objData, name, id) {
     _this.y = y;
     _this.width = width;
     _this.height = height;
+
+    _this.currentFloor = floor;
 
     _this.name = name;
 
