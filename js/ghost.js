@@ -1,23 +1,14 @@
 function ghost(x, y, floor) {
   var _this = this;
 
-  _this.spriteList = new Array();
-
   this.init = function(){
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_nw_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_n_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_ne_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_e_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_se_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_s_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_sw_down.png"]));
-    _this.spriteList.push(new Sprite(Tex_Main["ghost1_w_down.png"]));
-    _this.Sprite = _this.spriteList[0];
+    _this.Sprite = new Sprite(Tex_Main['player.png']);
     _this.addChild(_this.Sprite);
 
     _this.mapx = x;
     _this.mapy = y;
     _this.currentFloor = floor;
+    _this.delayTicks = 0;
 
     _this.time = Date.now();
 
@@ -25,16 +16,16 @@ function ghost(x, y, floor) {
     GAMEMANAGER.animatables.push(_this);
   }
 
-  this.changeSprite = function(i) {
-    _this.Sprite = _this.spriteList[i];
-    _this.removeChildren();
-    _this.addChild(_this.Sprite);
-  }
-
   this.setPosition = function(x, y){
     _this.mapx = x;
     _this.mapy = y;
     _this.position.set(x * MapData.tilewidth, y * MapData.tileheight);
+  }
+
+  this.setGPosition = function(x, y){
+    _this.mapx = Math.round(x/MapData.tilewidth)-1;
+    _this.mapy = Math.round(y/MapData.tileheight)-1;
+    _this.position.set(x, y);
   }
 
   this.move = function(d){
@@ -65,48 +56,32 @@ function ghost(x, y, floor) {
 
   this.animatable = function(){
 
-    if (!paused) {
-
     var screenX = _this.x + _this.width/2 + GAMEMANAGER.Map.position.x;
     var screenY = _this.y + _this.height/2 + GAMEMANAGER.Map.position.y;
 
     var rot = Math.atan2(GAMEMANAGER.player.y - screenY, GAMEMANAGER.player.x - screenX);
 
-//    _this.rotation = rot + (90*DEG2RAD);
+    _this.rotation = rot + (90*DEG2RAD);
 
     var rotTestValue = rot + Math.PI;
     if((Math.PI*(3/8)) >= rotTestValue && rotTestValue >= (Math.PI*(1/8))){
       _this.setFacing("NW");
-      _this.changeSprite(0);
     } else if((Math.PI*(5/8)) >= rotTestValue && rotTestValue >= (Math.PI*(3/8))){
       _this.setFacing("N");
-      _this.changeSprite(1);
     } else if((Math.PI*(7/8)) >= rotTestValue && rotTestValue >= (Math.PI*(5/8))){
       _this.setFacing("NE");
-      _this.changeSprite(2);
     } else if((Math.PI*(9/8)) >= rotTestValue && rotTestValue >= (Math.PI*(7/8))){
       _this.setFacing("E");
-      _this.changeSprite(3);
     } else if((Math.PI*(11/8)) >= rotTestValue && rotTestValue >= (Math.PI*(9/8))){
       _this.setFacing("SE");
-      _this.changeSprite(4);
     } else if((Math.PI*(13/8)) >= rotTestValue && rotTestValue >= (Math.PI*(11/8))){
       _this.setFacing("S");
-      _this.changeSprite(5);
     } else if((Math.PI*(15/8)) >= rotTestValue && rotTestValue >= (Math.PI*(13/8))){
       _this.setFacing("SW");
-      _this.changeSprite(6);
     } else {
       _this.setFacing("W");
-      _this.changeSprite(7);
     }
 
-
-    if (GAMEMANAGER.overlay.active.type == "torch") {
-      _this.visible = false;
-    } else {
-      _this.visible = true;
-    }
 
     //console.log(Date.now() - _this.time);
     if(Date.now() - _this.time > 1000){
@@ -115,10 +90,39 @@ function ghost(x, y, floor) {
     }
 
   }
+
+  this.moveFloor = function(newFloor){
+    var triggers = GAMEMANAGER.Map.triggerdata[newFloor];
+    for (var tid in triggers) {
+      if (triggers.hasOwnProperty(tid)) {
+        var trigger = triggers[tid];
+        if(trigger.objData.type == "ghostTransferPoint"){
+          _this.currentFloor = newFloor;
+          _this.setGPosition(trigger.x + trigger.width/2, trigger.y + trigger.height/2);
+
+          _this.parent.removeChild(_this);
+          GAMEMANAGER.Map.floors[newFloor].ghostLayer.addChild(_this);
+
+          console.log(_this);
+          console.log("Valid Transfer Point");
+        }
+      }
+    }
   }
 
   this.aiRun = function(){
-    _this.move(1);
+    if(_this.currentFloor != GAMEMANAGER.Map.currentFloor){
+      if(_this.delayTicks >= 1){
+        _this.delayTicks = 0;
+
+        _this.moveFloor(GAMEMANAGER.Map.currentFloor);
+      } else {
+        _this.delayTicks++;
+      }
+    } else {
+      _this.delayTicks = 0;
+      _this.move(1);
+    }
   }
 
   Container.call( this );

@@ -1,0 +1,11 @@
+Trigger Type index:
+
+ghostTrigger => trigger a ghost to spawn in a certain trigger area
+  requires:
+    spawnid => the id of the trigger in which the ghost will spawn
+
+ghostSpawn => a general spawn area
+
+Trigger Properties and their use:
+
+inactive => set the trigger not run any code 
