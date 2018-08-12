@@ -71,7 +71,7 @@ Jem and Jack's Todo ---
 [ ] - Use wall data to block light
 [ ] - Fix collision bug when scaling
 [ ] - Ghosts move away after attacking
-[ ] - Timer with MB instead of seconds
+[X] - Timer with MB instead of seconds
 [ ] - Write script
 [X] - Change how players pick items up
 [ ] - Interactive objects
