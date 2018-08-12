@@ -1109,6 +1109,75 @@
                          "width":32,
                          "x":1952,
                          "y":1440
+                        }, 
+                        {
+                         "height":96,
+                         "id":186,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"Hello and welcome to Ghost Hunters TV! We're here at a creepy mansion... the doors are locked though, looks like I'll have to try and find a key first.",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":128,
+                         "x":1888,
+                         "y":1760
+                        }, 
+                        {
+                         "height":32,
+                         "id":189,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"Hmm I can probably use this key to unlock the front door",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2208,
+                         "y":1632
+                        }, 
+                        {
+                         "height":32,
+                         "id":190,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"Is that a g... g... ghost!!",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":64,
+                         "x":1920,
+                         "y":1632
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1603,7 +1672,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":186,
+ "nextobjectid":191,
  "orientation":"orthogonal",
  "properties":
     {

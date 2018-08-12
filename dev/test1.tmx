@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="186">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="191">
  <properties>
   <property name="spawnX" type="int" value="60"/>
   <property name="spawnY" type="int" value="56"/>
@@ -341,6 +341,27 @@
     <properties>
      <property name="inactive" type="bool" value="true"/>
      <property name="type" value="ghostSpawn"/>
+    </properties>
+   </object>
+   <object id="186" x="1888" y="1760" width="128" height="96">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="Hello and welcome to Ghost Hunters TV! We're here at a creepy mansion... the doors are locked though, looks like I'll have to try and find a key first."/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="189" x="2208" y="1632" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="Hmm I can probably use this key to unlock the front door"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="190" x="1920" y="1632" width="64" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="Is that a g... g... ghost!!"/>
+     <property name="type" value="queueText"/>
     </properties>
    </object>
   </objectgroup>
