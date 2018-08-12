@@ -3,7 +3,7 @@ function player() {
 
   _this.mapx;
   _this.mapy;
-  _this.facing;
+  _this.facing = "S";
   _this.inventory = new Array();
   _this.spriteList = new Array();
   _this.moveD = 0;
@@ -38,7 +38,9 @@ function player() {
   this.onKeyDown = function(key){
 
     if (key.keyCode === 81 || key.keyCode === 32) {
-      GAMEMANAGER.overlay.switch();
+      if (!paused && GAMEMANAGER.cameraTimer > 0) {
+        GAMEMANAGER.overlay.switch();
+      }
     }
 
     // W Key is 87
@@ -66,11 +68,8 @@ function player() {
     }
 
     if (key.keyCode === 69) {
-      if (!paused) {
-        GAMEMANAGER.textmanager.showText();
-      } else {
-        GAMEMANAGER.textmanager.hideText();
-      }
+      GAMEMANAGER.Map.pickUp(_this.mapx, _this.mapy);
+      GAMEMANAGER.Map.openDoors(_this.mapx, _this.mapy, _this.facing);
     }
   }
 
@@ -100,6 +99,10 @@ function player() {
   this.animatable = function(){
 
     if (!paused) {
+
+    GAMEMANAGER.interactable = false;
+    GAMEMANAGER.Map.checkDoors(_this.mapx, _this.mapy, _this.facing);
+    GAMEMANAGER.Map.checkObjects(_this.mapx, _this.mapy);
 
     if (_this.moveD != 0 || _this.moveS != 0) {
       _this.movementTimer -= 1;
@@ -151,6 +154,7 @@ function player() {
 
   this.move = function(d, s){
     var dx = 0, dy = 0;
+
     if (_this.facing.includes('S')) {
       if (!(GAMEMANAGER.Map.checkCollision(_this.mapx, _this.mapy + d)) && d != 0) {
         dy = d;
@@ -183,9 +187,13 @@ function player() {
       }
     }
 
-    if(!(GAMEMANAGER.Map.checkCollision(_this.mapx + dx, _this.mapy + dy))){
-      _this.setPosition(_this.mapx + dx, _this.mapy + dy);
+    if((GAMEMANAGER.Map.checkCollision(_this.mapx + dx, _this.mapy + dy))){
+      dx = 0;
+      dy = 0;
     }
+
+    _this.setPosition(_this.mapx + dx, _this.mapy + dy);
+
   }
 
   this.addItem = function(id) {

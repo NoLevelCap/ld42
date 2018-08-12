@@ -9,6 +9,9 @@ function textmanager() {
     GAMEMANAGER.animatables.push(_this);
     document.addEventListener('keydown', _this.onKeyDown);
     document.addEventListener("click", _this.onMouseClick);
+    _this.rect = new PIXI.Graphics();
+    _this.rect.beginFill(0x222222);
+    _this.rect.drawRect(0, 0, 960, 100);
   }
 
   this.onKeyDown = function(key){
@@ -44,9 +47,10 @@ function textmanager() {
     }
     var text = _this.displayText.slice(0, _this.cursorPos);
     var fontSize = 24;
-    var lineLength = fontSize * 20;
+    var lineLength = fontSize * 40;
     _this.text = new PIXI.Text(text, {fontFamily: "Courier", fontSize: fontSize, fill: 0xFFFFFF, align: "left", wordWrap: true, wordWrapWidth: lineLength});
     _this.removeChildren();
+    _this.addChild(_this.rect);
     _this.addChild(_this.text);
   }
 
