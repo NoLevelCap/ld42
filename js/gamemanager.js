@@ -30,12 +30,10 @@ function gamemanager() {
 //    _this.gameContainer.pivot.y = 720 * 0.25;
 //    _this.gameContainer.scale.x = _this.gameContainer.scale.y = 2.0;
 
-    _this.cameraTimer = 30;
+    _this.cameraTimer = 60;
 
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
-    _this.textmanager = new textmanager();
-    _this.uiContainer.addChild(_this.textmanager);
     var d = new Date();
     _this.currentTime = d.getSeconds();
 
@@ -45,6 +43,14 @@ function gamemanager() {
     _this.interactText.y = 360;
     _this.uiContainer.addChild(_this.interactText);
     _this.interactText.visible = false;
+
+    _this.memoryText = new PIXI.Text("", {fontFamily: "Courier", fontSize: 32, fill: 0xFFFFFF, align: "right"});
+    _this.memoryText.x = 600;
+    _this.memoryText.y = 50;
+    _this.uiContainer.addChild(_this.memoryText);
+
+    _this.textmanager = new textmanager();
+    _this.uiContainer.addChild(_this.textmanager);
 
   }
 

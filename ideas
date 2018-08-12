@@ -75,6 +75,7 @@ Jem and Jack's Todo ---
 [ ] - Write script
 [X] - Change how players pick items up
 [ ] - Interactive objects
+[ ] - add to map get trigger by id and layername method
 
 Map Metadata ->
 
