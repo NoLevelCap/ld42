@@ -116,6 +116,7 @@ function map() {
         if (obj.tileData.item) {
           GAMEMANAGER.player.addItem(obj.tileData.name);
           console.log(GAMEMANAGER.player.inventory);
+          GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(obj), 1);
           _this.objdata[_this.currentFloor][i].remove();
           _this.objdata[_this.currentFloor].splice(i, 1);
         }
@@ -176,6 +177,7 @@ function map() {
         if(obj.tileData.solid){
           if (obj.tileData.type == "door") {
             if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+              GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(obj), 1);
               _this.objdata[_this.currentFloor][i].remove();
               _this.objdata[_this.currentFloor].splice(i, 1);
             }
@@ -300,7 +302,6 @@ function mapTile(tileId) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
-<<<<<<< HEAD
 
     GAMEMANAGER.animatables.push(_this);
 
@@ -316,8 +317,6 @@ function mapTile(tileId) {
         _this.children[0].tint = 0x001A00;
       }
     }
-=======
->>>>>>> refs/remotes/origin/master
   }
 
   Container.call( this );
@@ -344,13 +343,15 @@ function mapObject(gid, objData) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
+
+    GAMEMANAGER.animatables.push(_this);
+
   }
 
   this.remove = function() {
     _this.destroy();
   }
 
-<<<<<<< HEAD
   this.animatable = function() {
     if (GAMEMANAGER.overlay.active.type == "torch") {
       _this.children[0].tint = 0xFFFFFF;
@@ -359,8 +360,6 @@ function mapObject(gid, objData) {
     }
   }
 
-=======
->>>>>>> refs/remotes/origin/master
   Container.call( this );
   this.init();
 
