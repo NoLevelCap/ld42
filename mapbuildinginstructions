@@ -8,4 +8,4 @@ ghostSpawn => a general spawn area
 
 Trigger Properties and their use:
 
-inactive => set the trigger not run any code 
+inactive => set the trigger not run any code

@@ -31,6 +31,7 @@ function overlay() {
       _inThis.mask.beginFill(0xFF);
       _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       _inThis.mask.endFill();
+
       _inThis.overlay.addChild(_inThis.mask);
       _inThis.overlay.addChild(_inThis.text);
     }

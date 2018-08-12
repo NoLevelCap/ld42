@@ -247,7 +247,49 @@
                 {
                  "draworder":"topdown",
                  "name":"Trigger Layer",
-                 "objects":[],
+                 "objects":[
+                        {
+                         "height":32,
+                         "id":197,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2240,
+                         "y":1536
+                        }, 
+                        {
+                         "height":32,
+                         "id":198,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1504,
+                         "y":1664
+                        }],
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -257,7 +299,7 @@
          "name":"Basement",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1178,6 +1220,69 @@
                          "width":64,
                          "x":1920,
                          "y":1632
+                        }, 
+                        {
+                         "height":256,
+                         "id":191,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":160,
+                         "x":1504,
+                         "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":192,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2240,
+                         "y":1664
+                        }, 
+                        {
+                         "height":32,
+                         "id":193,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2272,
+                         "y":1760
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1188,7 +1293,7 @@
          "name":"Ground Floor",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -1658,6 +1763,48 @@
                          "width":32,
                          "x":2208,
                          "y":1280
+                        }, 
+                        {
+                         "height":64,
+                         "id":195,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":448,
+                         "x":1728,
+                         "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":196,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2464,
+                         "y":1504
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1672,7 +1819,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":191,
+ "nextobjectid":199,
  "orientation":"orthogonal",
  "properties":
     {

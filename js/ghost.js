@@ -97,21 +97,30 @@ function ghost(x, y, floor) {
 
   this.moveFloor = function(newFloor){
     var triggers = GAMEMANAGER.Map.triggerdata[newFloor];
+    var transferPoints = new Array();
     for (var tid in triggers) {
       if (triggers.hasOwnProperty(tid)) {
         var trigger = triggers[tid];
         if(trigger.objData.type == "ghostTransferPoint"){
-          _this.currentFloor = newFloor;
-          _this.setGPosition(trigger.x + trigger.width/2, trigger.y + trigger.height/2);
-
-          _this.parent.removeChild(_this);
-          GAMEMANAGER.Map.floors[newFloor].ghostLayer.addChild(_this);
+          transferPoints.push(trigger);
 
           console.log(_this);
           console.log("Valid Transfer Point");
         }
       }
     }
+
+    if(transferPoints.length <= 0)
+      return false;
+
+    var trigger = transferPoints[Math.floor(Math.random() * transferPoints.length)]
+
+    _this.currentFloor = newFloor;
+    _this.setGPosition(trigger.x + trigger.width/2, trigger.y + trigger.height/2);
+
+    _this.parent.removeChild(_this);
+    GAMEMANAGER.Map.floors[newFloor].ghostLayer.addChild(_this);
+
   }
 
   this.aiRun = function(){

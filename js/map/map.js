@@ -300,7 +300,6 @@ function mapTile(tileId) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
-<<<<<<< HEAD
 
     GAMEMANAGER.animatables.push(_this);
 
@@ -316,8 +315,6 @@ function mapTile(tileId) {
         _this.children[0].tint = 0x001A00;
       }
     }
-=======
->>>>>>> refs/remotes/origin/master
   }
 
   Container.call( this );
@@ -350,7 +347,6 @@ function mapObject(gid, objData) {
     _this.destroy();
   }
 
-<<<<<<< HEAD
   this.animatable = function() {
     if (GAMEMANAGER.overlay.active.type == "torch") {
       _this.children[0].tint = 0xFFFFFF;
@@ -359,8 +355,6 @@ function mapObject(gid, objData) {
     }
   }
 
-=======
->>>>>>> refs/remotes/origin/master
   Container.call( this );
   this.init();
 
