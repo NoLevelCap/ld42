@@ -56,7 +56,7 @@ Jem and Jack's Todo ---
 [X] - Object Rendering
 [X] - Ghost AI
 [X] - Objectives
-[ ] - Camera mechanic
+[X] - Camera mechanic
 [ ] - Pretty up overlays
 [ ] - Begin and end of level
 [ ] - Create Menus & UI
@@ -69,6 +69,12 @@ Jem and Jack's Todo ---
 [X] - Ghosts hidden on torch overlay
 [X] - Walls harder to see on camera overlays
 [ ] - Use wall data to block light
+[ ] - Fix collision bug when scaling
+[ ] - Ghosts move away after attacking
+[ ] - Timer with MB instead of seconds
+[ ] - Write script
+[X] - Change how players pick items up
+[ ] - Interactive objects
 
 Map Metadata ->
 
