@@ -24,9 +24,17 @@ function gamemanager() {
     _this.player = new player();
     _this.player.setPosition(MapData.properties.spawnX,MapData.properties.spawnY);
     _this.gameContainer.addChild(_this.player);
+    _this.Map.checkCollision(_this.player.mapx, _this.player.mapy);
+
+//    _this.gameContainer.pivot.x = 960 * 0.25;
+//    _this.gameContainer.pivot.y = 720 * 0.25;
+//    _this.gameContainer.scale.x = _this.gameContainer.scale.y = 2.0;
 
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
+    _this.textmanager = new textmanager();
+    _this.uiContainer.addChild(_this.textmanager);
+
   }
 
   this.maingameloading = function(){

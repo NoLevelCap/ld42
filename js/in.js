@@ -1,10 +1,10 @@
 //Create a Pixi stage and renderer and add the
 //renderer.view to the DOM
 var stage = new Container(),
-    renderer = autoDetectRenderer(1280, 960, {resolution: 1, antialias:false});
+    renderer = autoDetectRenderer(960, 720, {resolution: 1, antialias:false});
 document.body.appendChild(renderer.view);
 
-//PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 
 loader

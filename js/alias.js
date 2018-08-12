@@ -12,6 +12,7 @@ var Container = PIXI.Container,
     sharedticker = PIXI.ticker.shared,
     Console = console,
     DEG2RAD = 0.01745329251;
+    paused = false;
 
 /*WebFontConfig = {
   custom: {

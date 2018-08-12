@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: #000000;
+}
+
+canvas {
+  display: block;
+  margin: 8px auto;
+  border: 2px #000;
+  border-radius: 5px;
+  -visibility: hidden;
+
+  -webkit-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.31);
+  -moz-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.31);
+  box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.31);
+}
