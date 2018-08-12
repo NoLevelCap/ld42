@@ -15,7 +15,7 @@ function gamemanager() {
     _this.uiContainer = new Container();
     stage.addChild(_this.uiContainer);
 
-    loadMap("test3");
+    loadMap("test2");
   }
 
   this.onMapLoad = function(){

@@ -91,6 +91,7 @@ function map() {
     _this.yshift = renderer.height/2 - MapData.tileheight/2;
     _this.position.set(_this.xshift, _this.yshift);
 
+
   }
 
   this.changeFloor = function(floor) {
@@ -252,7 +253,6 @@ function map() {
       }
 
     }
-
     return objCollision;
   }
 
@@ -300,6 +300,7 @@ function mapTile(tileId) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
+<<<<<<< HEAD
 
     GAMEMANAGER.animatables.push(_this);
 
@@ -315,6 +316,8 @@ function mapTile(tileId) {
         _this.children[0].tint = 0x001A00;
       }
     }
+=======
+>>>>>>> refs/remotes/origin/master
   }
 
   Container.call( this );
@@ -341,18 +344,13 @@ function mapObject(gid, objData) {
     if(_this.tileData === undefined){
       _this.tileData = new Array();
     }
-
-    GAMEMANAGER.animatables.push(_this);
-
   }
 
   this.remove = function() {
-    console.log(GAMEMANAGER.animatables.indexOf(_this));
-    GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(_this), 1);
-    _this.removeChildren();
     _this.destroy();
   }
 
+<<<<<<< HEAD
   this.animatable = function() {
     if (GAMEMANAGER.overlay.active.type == "torch") {
       _this.children[0].tint = 0xFFFFFF;
@@ -361,6 +359,8 @@ function mapObject(gid, objData) {
     }
   }
 
+=======
+>>>>>>> refs/remotes/origin/master
   Container.call( this );
   this.init();
 
@@ -406,11 +406,11 @@ function triggerObject(x, y, width, height, objData, name, id, floor) {
   }
 
   this.triggerRun = function(){
+    console.log("Trying to trigger run " + _this.objData.type);
     TRIGGERS[_this.objData.type](_this);
   }
 
   this.animatable = function(){
-
     if(_this.triggered){
       _this.triggerRun();
       _this.triggered = false;
