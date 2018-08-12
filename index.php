@@ -2,7 +2,7 @@
   <meta charset="utf-8">
 
 
-  <title>Ship</title>
+  <title>Ghost Hunters</title>
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -14,6 +14,7 @@
 
   <script src="js/ghost.js"></script>
   <script src="js/overlay.js"></script>
+  <script src="js/textmanager.js"></script>
   <script src="js/gamemanager.js"></script>
   <script src="js/player.js"></script>
 
@@ -28,6 +29,6 @@
 
 </head>
 <body>
-  <div id="main"><div id="box">Ghost Hunters</div></div>
+  <div id="main"><div id="box"></div></div>
   <script src="js/in.js"></script>
 </body>

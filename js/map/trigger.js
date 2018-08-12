@@ -27,4 +27,13 @@ function triggerCode(){
   this.ghostSpawn = function(trigger){
 
   }
+
+  this.queueText = function(trigger) {
+    if (trigger.objData.active) {
+      trigger.objData.active = false;
+      GAMEMANAGER.textmanager.queueText(trigger.objData.text);
+      GAMEMANAGER.textmanager.showText();
+    }
+  }
+
 }

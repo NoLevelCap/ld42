@@ -21,7 +21,7 @@ function overlay() {
 
       _inThis.mask = new Graphics();
       _inThis.mask.beginFill(0xFF);
-      _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 200);
+      _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       _inThis.mask.endFill();
     }
 
@@ -38,6 +38,8 @@ function overlay() {
     this.process = function(){
     }
 
+    _inThis.type = "torch";
+
     this.init();
   }
 
@@ -45,14 +47,21 @@ function overlay() {
     var _inThis = this;
 
     this.init = function(){
+
+      _inThis.sprite = new Sprite(Tex_Main["videoOverlay.png"]);
+      _inThis.sprite.width = 960;
+      _inThis.sprite.height = 720;
+
       _inThis.overlay = new Container();
       _this.addChild(_inThis.overlay);
 
       _inThis.mask = new Sprite(Tex_Main["cameraMask.png"]);
       _inThis.mask.pivot.set(_inThis.mask.width/2, _inThis.mask.height);
       _inThis.mask.position.set(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y);
-      _inThis.mask.rotation = GAMEMANAGER.player.rotation;
+      _inThis.mask.rotation = GAMEMANAGER.player.playerRotate;
       _inThis.overlay.addChild(_inThis.mask);
+      _inThis.overlay.addChild(_inThis.sprite);
+
     }
 
     this.show = function(){
@@ -67,8 +76,10 @@ function overlay() {
     }
 
     this.process = function(){
-      _inThis.mask.rotation = GAMEMANAGER.player.rotation;
+      _inThis.mask.rotation = GAMEMANAGER.player.playerRotate;
     }
+
+    _inThis.type = "camera";
 
     this.init();
   }
