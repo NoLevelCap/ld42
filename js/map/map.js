@@ -99,17 +99,9 @@ function map() {
     _this.floors[_this.currentFloor].visible = true;
   }
 
-  this.checkCollision = function(x,y) {
+  this.pickUp = function(x, y) {
     var tile = _this.mapdata[_this.currentFloor][x][y];
-
-    _this.checkTriggers(tile);
-
-    if(tile.tileData.solid){
-      return true;
-    }
-
-    var objCollision = false;
-
+    GAMEMANAGER.interactable = false;
     for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
       var obj = _this.objdata[_this.currentFloor][i];
 
@@ -126,16 +118,136 @@ function map() {
           _this.objdata[_this.currentFloor][i].remove();
           _this.objdata[_this.currentFloor].splice(i, 1);
         }
+        if(obj.tileData.solid){
+          objCollision = true;
+          if (obj.tileData.type == "door") {
+            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  this.checkObjects = function(x,y) {
+    var tile = _this.mapdata[_this.currentFloor][x][y];
+    for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
+      var obj = _this.objdata[_this.currentFloor][i];
+
+      var screenX = tile.x + tile.width/2 + _this.position.x;
+      var screenY = tile.y + tile.height/2 + _this.position.y;
+
+      //console.log(screenX, screenY);
+      //console.log(obj.Sprite.vertexData);
+
+      if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
+        if (obj.tileData.item) {
+          GAMEMANAGER.interactable = true;
+        }
+      }
+    }
+  }
+
+  this.openDoors = function(x, y, facing) {
+    var dx = 0;
+    var dy = 0;
+    if (facing.includes('S')) {
+      dy = 1;
+    } else if (facing.includes('N')) {
+      dy = -1;
+    }
+    if (facing.includes('E')) {
+      dx = 1;
+    } else if (facing.includes('W')) {
+      dx = -1;
+    }
+    x += dx;
+    y += dy;
+
+    var tile = _this.mapdata[_this.currentFloor][x][y];
+    for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
+      var obj = _this.objdata[_this.currentFloor][i];
+
+      var screenX = tile.x + tile.width/2 + _this.position.x;
+      var screenY = tile.y + tile.height/2 + _this.position.y;
+
+      if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
+        if(obj.tileData.solid){
+          if (obj.tileData.type == "door") {
+            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+              _this.objdata[_this.currentFloor][i].remove();
+              _this.objdata[_this.currentFloor].splice(i, 1);
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  this.checkDoors = function(x, y, facing) {
+
+    var dx = 0;
+    var dy = 0;
+    if (facing.includes('S')) {
+      dy = 1;
+    } else if (facing.includes('N')) {
+      dy = -1;
+    }
+    if (facing.includes('E')) {
+      dx = 1;
+    } else if (facing.includes('W')) {
+      dx = -1;
+    }
+    x += dx;
+    y += dy;
+
+    var tile = _this.mapdata[_this.currentFloor][x][y];
+    for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
+      var obj = _this.objdata[_this.currentFloor][i];
+
+      var screenX = tile.x + tile.width/2 + _this.position.x;
+      var screenY = tile.y + tile.height/2 + _this.position.y;
+
+      if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
+        if(obj.tileData.solid){
+          if (obj.tileData.type == "door") {
+            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+              GAMEMANAGER.interactable = true;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  this.checkCollision = function(x,y) {
+    var tile = _this.mapdata[_this.currentFloor][x][y];
+
+    _this.checkTriggers(tile);
+
+    var objCollision = false;
+
+    if(tile.tileData.solid){
+      objCollision = true;
+    }
+
+    for (var i = 0; i < _this.objdata[_this.currentFloor].length; i++) {
+      var obj = _this.objdata[_this.currentFloor][i];
+
+      var screenX = tile.x + tile.width/2 + _this.position.x;
+      var screenY = tile.y + tile.height/2 + _this.position.y;
+
+      //console.log(screenX, screenY);
+      //console.log(obj.Sprite.vertexData);
+
+      if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.type == "stairs") {
           _this.changeFloor(obj.objData.toFloor);
         }
         if(obj.tileData.solid){
           objCollision = true;
-          if (obj.tileData.type == "door") {
-            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
-              objCollision = false;
-            }
-          }
         }
       }
 
@@ -200,7 +312,7 @@ function mapTile(tileId) {
       if (_this.tileData.solid) {
         _this.children[0].tint = 0x000000;
       } else {
-        _this.children[0].tint = 0x001000;
+        _this.children[0].tint = 0x001A00;
       }
     }
   }
@@ -245,7 +357,7 @@ function mapObject(gid, objData) {
     if (GAMEMANAGER.overlay.active.type == "torch") {
       _this.children[0].tint = 0xFFFFFF;
     } else {
-      _this.children[0].tint = 0x001200;
+      _this.children[0].tint = 0x001D00;
     }
   }
 

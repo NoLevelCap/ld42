@@ -2,10 +2,14 @@ function overlay() {
   var _this = this;
 
 
-
   this.init = function(){
-    _this.inactive = new _this.torch();
+    _this.text = new PIXI.Text(GAMEMANAGER.cameraTimer, {fontFamily: "Courier", fontSize: 32, fill: 0xFFFFFF, align: "right"});
+    _this.text.text = GAMEMANAGER.cameraTimer + " MBs remaining";
+    _this.text.x = 600;
+    _this.text.y = 50;
+
     _this.active = new _this.camera();
+    _this.inactive = new _this.torch();
 
     GAMEMANAGER.animatables.push(_this);
 
@@ -19,10 +23,16 @@ function overlay() {
       _inThis.overlay = new Container();
       _this.addChild(_inThis.overlay);
 
+      _inThis.text = new PIXI.Text(GAMEMANAGER.cameraTimer, {fontFamily: "Courier", fontSize: 32, fill: 0xFFFFFF, align: "right"});
+      _inThis.text.x = 600;
+      _inThis.text.y = 50;
+
       _inThis.mask = new Graphics();
       _inThis.mask.beginFill(0xFF);
       _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       _inThis.mask.endFill();
+      _inThis.overlay.addChild(_inThis.mask);
+      _inThis.overlay.addChild(_inThis.text);
     }
 
     this.show = function(){
@@ -35,7 +45,8 @@ function overlay() {
       _inThis.overlay.visible = false;
     }
 
-    this.process = function(){
+    this.process = function() {
+      _inThis.text.text = GAMEMANAGER.cameraTimer + " MBs remaining";
     }
 
     _inThis.type = "torch";
@@ -62,6 +73,8 @@ function overlay() {
       _inThis.overlay.addChild(_inThis.mask);
       _inThis.overlay.addChild(_inThis.sprite);
 
+      _inThis.overlay.addChild(_this.text);
+
     }
 
     this.show = function(){
@@ -76,6 +89,16 @@ function overlay() {
     }
 
     this.process = function(){
+      var d = new Date();
+      var tempSec = d.getSeconds();
+      if (tempSec != GAMEMANAGER.currentTime && !paused) {
+        GAMEMANAGER.cameraTimer -= 1;
+        GAMEMANAGER.currentTime = tempSec;
+        _this.text.text = GAMEMANAGER.cameraTimer + " MBs remaining";
+        if (GAMEMANAGER.cameraTimer <= 0) {
+          GAMEMANAGER.overlay.switch();
+        }
+      }
       _inThis.mask.rotation = GAMEMANAGER.player.playerRotate;
     }
 

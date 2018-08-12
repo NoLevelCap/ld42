@@ -30,10 +30,21 @@ function gamemanager() {
 //    _this.gameContainer.pivot.y = 720 * 0.25;
 //    _this.gameContainer.scale.x = _this.gameContainer.scale.y = 2.0;
 
+    _this.cameraTimer = 30;
+
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
     _this.textmanager = new textmanager();
     _this.uiContainer.addChild(_this.textmanager);
+    var d = new Date();
+    _this.currentTime = d.getSeconds();
+
+    _this.interactable = false;
+    _this.interactText = new PIXI.Text("Press E", {fontFamily: "Courier", fontSize: 24, fill: 0xFFFFFF, alight: "left"});
+    _this.interactText.x = 480;
+    _this.interactText.y = 360;
+    _this.uiContainer.addChild(_this.interactText);
+    _this.interactText.visible = false;
 
   }
 
@@ -42,6 +53,11 @@ function gamemanager() {
   }
 
   this.maingame = function(){
+    if (_this.interactable && !paused) {
+      _this.interactText.visible = true;
+    } else {
+      _this.interactText.visible = false;
+    }
     for (var i = 0; i < _this.animatables.length; i++) {
       _this.animatables[i].animatable();
     }
