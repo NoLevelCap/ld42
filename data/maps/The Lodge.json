@@ -237,10 +237,87 @@
                          "width":32,
                          "x":1280,
                          "y":1600
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
+                 "draworder":"topdown",
+                 "name":"Trigger Layer",
+                 "objects":[
+                        {
+                         "height":32,
+                         "id":193,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "interactable":true,
+                             "text":"E0001",
+                             "type":"endGame"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "interactable":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1280,
+                         "y":1600
                         }, 
                         {
                          "height":32,
-                         "id":213,
+                         "id":202,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":false,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2240,
+                         "y":1536
+                        }, 
+                        {
+                         "height":32,
+                         "id":203,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":false,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1504,
+                         "y":1664
+                        }, 
+                        {
+                         "height":32,
+                         "id":220,
                          "name":"",
                          "properties":
                             {
@@ -261,83 +338,6 @@
                          "x":1408,
                          "y":1664
                         }],
-                 "opacity":1,
-                 "type":"objectgroup",
-                 "visible":true,
-                 "x":0,
-                 "y":0
-                }, 
-                {
-                 "draworder":"topdown",
-                 "name":"Trigger Layer",
-                 "objects":[
-                        {
-                         "height":32,
-                         "id":193,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "text":"Nothing happens",
-                             "type":"queueText"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "text":"string",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1760,
-                         "y":1536
-                        }, 
-                        {
-                         "height":32,
-                         "id":202,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":false,
-                             "type":"ghostTransferPoint"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":2720,
-                         "y":1472
-                        }, 
-                        {
-                         "height":32,
-                         "id":203,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":false,
-                             "type":"ghostTransferPoint"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1984,
-                         "y":1600
-                        }],
-                 "offsetx":-480,
-                 "offsety":64,
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -1338,7 +1338,7 @@
                          "y":1696
                         }, 
                         {
-                         "height":64,
+                         "height":128,
                          "id":207,
                          "name":"",
                          "properties":
@@ -1358,7 +1358,7 @@
                          "visible":true,
                          "width":128,
                          "x":1888,
-                         "y":1440
+                         "y":1408
                         }, 
                         {
                          "height":32,
@@ -1404,7 +1404,7 @@
                          "visible":true,
                          "width":64,
                          "x":1920,
-                         "y":1536
+                         "y":1568
                         }, 
                         {
                          "height":32,
@@ -1808,6 +1808,14 @@
                          "height":32,
                          "id":165,
                          "name":"",
+                         "properties":
+                            {
+                             "name":"endGameItem"
+                            },
+                         "propertytypes":
+                            {
+                             "name":"string"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -2038,11 +2046,11 @@
          "name":"First Floor",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
- "nextobjectid":215,
+ "nextobjectid":223,
  "orientation":"orthogonal",
  "properties":
     {

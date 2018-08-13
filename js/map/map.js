@@ -136,7 +136,12 @@ function map() {
       if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.item) {
           SOUNDMANAGER.getSound("pickup").play();
-          GAMEMANAGER.player.addItem(obj.tileData.name);
+          var name = obj.tileData.name;
+          if(!(obj.objData.name === undefined)){
+            name = obj.objData.name;
+          }
+
+          GAMEMANAGER.player.addItem(name);
           var sprite = new Sprite();
           sprite.texture = obj.Sprite.texture;
           sprite.width *= 2;
@@ -148,13 +153,6 @@ function map() {
           GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(obj), 1);
           _this.objdata[_this.currentFloor][i].remove();
           _this.objdata[_this.currentFloor].splice(i, 1);
-        }
-        if(obj.tileData.solid){
-          objCollision = true;
-          if (obj.tileData.type == "door") {
-            if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
-            }
-          }
         }
       }
     }
@@ -309,12 +307,19 @@ function map() {
       if (_this.triggerdata[_this.currentFloor].hasOwnProperty(triggerid)) {
         var trigger = _this.triggerdata[_this.currentFloor][triggerid];
 
-        if(!trigger.objData.inactive && !trigger.objData.interactable){
+
+
+        if(trigger.objData.active && !trigger.objData.interactable){
+
+
           var screenX = tile.x + tile.width/2;
           var screenY = tile.y + tile.height/2;
           var rect = trigger.bounds;
 
+          console.log();
+
           if(rect.contains(screenX, screenY)){
+            console.log(trigger)
             trigger.trigger();
           }
         }
@@ -445,7 +450,7 @@ function triggerObject(x, y, width, height, objData, name, id, floor) {
   this.trigger = function(){
     Console.log(_this.id + " Trigger: " + _this.name);
 
-    if(_this.triggered || !_this.objData.active)
+    if(_this.triggered)
       return;
 
     _this.triggered = true;
@@ -460,9 +465,9 @@ function triggerObject(x, y, width, height, objData, name, id, floor) {
       if(!_this.objData.singular){
         _this.triggered = false;
         _this.objData.active = true;
-      } else {
-        _this.objData.active = false;
       }
+    } else {
+      _this.objData.active = false;
     }
   }
 
