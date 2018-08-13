@@ -134,6 +134,9 @@ function gamemanager() {
       _this.levelSelectUI.levelSelectTrack.addChild(lWindow);
       _this.levelSelectUI.levels.push(lWindow);
     }
+
+    SOUNDMANAGER.addSound("example", ["G0001"]);
+    SOUNDMANAGER.getSound("example").play();
   }
 
   this.levelselect = function(){

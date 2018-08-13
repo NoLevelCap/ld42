@@ -148,10 +148,6 @@ function map() {
           _this.objdata[_this.currentFloor][i].remove();
           _this.objdata[_this.currentFloor].splice(i, 1);
         }
-        if (obj.objData.interactive && obj.objData.active) {
-          console.log(obj.objData.function);
-          eval(obj.objData.function);
-        }
         if(obj.tileData.solid){
           objCollision = true;
           if (obj.tileData.type == "door") {
@@ -310,7 +306,7 @@ function map() {
       if (_this.triggerdata[_this.currentFloor].hasOwnProperty(triggerid)) {
         var trigger = _this.triggerdata[_this.currentFloor][triggerid];
 
-        if(!trigger.objData.inactive){
+        if(!trigger.objData.inactive && !trigger.objData.interactable){
           var screenX = tile.x + tile.width/2;
           var screenY = tile.y + tile.height/2;
           var rect = trigger.bounds;

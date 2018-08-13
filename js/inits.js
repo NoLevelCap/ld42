@@ -1,3 +1,3 @@
 var LEVELS_INMENU = [
-  "test3", "test2"
+  "test4", "test3", "test2"
 ]
