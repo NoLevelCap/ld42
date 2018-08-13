@@ -64,6 +64,13 @@ function gamemanager() {
     _this.gameoverText.visible = false;
     _this.uiContainer.addChild(_this.gameoverText);
 
+    _this.electricitySprite = new Sprite(Tex_Main["electricity1.png"]);
+    _this.electricitySprite.width = 960;
+    _this.electricitySprite.height = 720;
+    _this.electricitySprite.visible = false;
+    _this.electricityTimer = 0;
+    _this.uiContainer.addChild(_this.electricitySprite);
+
   }
 
   this.maingameloading = function(){
@@ -101,6 +108,8 @@ function gamemanager() {
 
   this.endmaingame = function(){
     stage.removeChildren();
+    _this.player.removeEventListeners();
+    _this.textmanager.removeEventListeners();
     _this.animatables = [];
     delete _this.Map;
     _this.textmanager.destroy({children:true});

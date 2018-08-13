@@ -105,6 +105,14 @@ function map() {
     } else {
       _this.objectShakeSprite.anchor.set(0.0, 0.0);
     }
+    if (GAMEMANAGER.electricityTimer > 0) {
+      GAMEMANAGER.electricityTimer -= 1;
+      GAMEMANAGER.electricitySprite.visible = true;
+      GAMEMANAGER.electricitySprite.anchor.y = 1 - GAMEMANAGER.electricitySprite.anchor.y;
+      GAMEMANAGER.electricitySprite.scale.y = -GAMEMANAGER.electricitySprite.scale.y;
+    } else {
+      GAMEMANAGER.electricitySprite.visible = false;
+    }
   }
 
   this.changeFloor = function(floor) {
