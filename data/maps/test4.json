@@ -250,29 +250,6 @@
                  "objects":[
                         {
                          "height":32,
-                         "id":193,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "text":"Nothing happens",
-                             "type":"queueText"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "text":"string",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1760,
-                         "y":1536
-                        }, 
-                        {
-                         "height":32,
                          "id":202,
                          "name":"",
                          "properties":
@@ -312,6 +289,31 @@
                          "width":32,
                          "x":1984,
                          "y":1600
+                        }, 
+                        {
+                         "height":32,
+                         "id":205,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "interactable":true,
+                             "singular":false,
+                             "type":"endGame"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "interactable":"bool",
+                             "singular":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1760,
+                         "y":1536
                         }],
                  "offsetx":-480,
                  "offsety":64,
@@ -358,6 +360,14 @@
                          "height":32,
                          "id":36,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":10
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -1308,7 +1318,7 @@
                              "active":true,
                              "interactable":true,
                              "singular":false,
-                             "text":"HELLO",
+                             "text":"DING DONG",
                              "type":"queueText"
                             },
                          "propertytypes":
@@ -1791,7 +1801,7 @@
                          "visible":true,
                          "width":32,
                          "x":1728,
-                         "y":1248
+                         "y":1216
                         }, 
                         {
                          "height":32,
@@ -1834,8 +1844,8 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":1728,
-                         "y":1216
+                         "x":1760,
+                         "y":1152
                         }, 
                         {
                          "height":64,
@@ -1892,7 +1902,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":205,
+ "nextobjectid":206,
  "orientation":"orthogonal",
  "properties":
     {

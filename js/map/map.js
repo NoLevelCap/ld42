@@ -105,6 +105,14 @@ function map() {
     } else {
       _this.objectShakeSprite.anchor.set(0.0, 0.0);
     }
+    if (GAMEMANAGER.electricityTimer > 0) {
+      GAMEMANAGER.electricityTimer -= 1;
+      GAMEMANAGER.electricitySprite.visible = true;
+      GAMEMANAGER.electricitySprite.anchor.y = 1 - GAMEMANAGER.electricitySprite.anchor.y;
+      GAMEMANAGER.electricitySprite.scale.y = -GAMEMANAGER.electricitySprite.scale.y;
+    } else {
+      GAMEMANAGER.electricitySprite.visible = false;
+    }
   }
 
   this.changeFloor = function(floor) {
@@ -127,6 +135,7 @@ function map() {
 
       if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.item) {
+          SOUNDMANAGER.getSound("pickup").play();
           GAMEMANAGER.player.addItem(obj.tileData.name);
           var sprite = new Sprite();
           sprite.texture = obj.Sprite.texture;
@@ -212,6 +221,7 @@ function map() {
         if(obj.tileData.solid){
           if (obj.tileData.type == "door") {
             if (GAMEMANAGER.player.checkInventory("key_" + obj.tileData.colour)) {
+              SOUNDMANAGER.getSound("openDoor").play();
               GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(obj), 1);
               _this.objdata[_this.currentFloor][i].remove();
               _this.objdata[_this.currentFloor].splice(i, 1);

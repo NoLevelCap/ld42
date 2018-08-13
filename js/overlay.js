@@ -63,7 +63,6 @@ function overlay() {
         }
 
 
-
         if(!(torch === undefined)){
           var diff = 2;
           var ran = 0;

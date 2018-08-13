@@ -31,7 +31,7 @@ function gamemanager() {
 //    _this.gameContainer.pivot.y = 720 * 0.25;
 //    _this.gameContainer.scale.x = _this.gameContainer.scale.y = 2.0;
 
-    _this.cameraTimer = 20;
+    _this.cameraTimer = 80;
 
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
@@ -63,6 +63,13 @@ function gamemanager() {
     _this.gameoverText.y = 500;
     _this.gameoverText.visible = false;
     _this.uiContainer.addChild(_this.gameoverText);
+
+    _this.electricitySprite = new Sprite(Tex_Main["electricity1.png"]);
+    _this.electricitySprite.width = 960;
+    _this.electricitySprite.height = 720;
+    _this.electricitySprite.visible = false;
+    _this.electricityTimer = 0;
+    _this.uiContainer.addChild(_this.electricitySprite);
 
   }
 
@@ -101,6 +108,8 @@ function gamemanager() {
 
   this.endmaingame = function(){
     stage.removeChildren();
+    _this.player.removeEventListeners();
+    _this.textmanager.removeEventListeners();
     _this.animatables = [];
     delete _this.Map;
     _this.textmanager.destroy({children:true});
@@ -127,7 +136,11 @@ function gamemanager() {
     }
 
     SOUNDMANAGER.addSound("example", ["G0001"]);
-    SOUNDMANAGER.getSound("example").play();
+    SOUNDMANAGER.addSound("pickup", ["G0002"]);
+    SOUNDMANAGER.addSound("openDoor", ["G0003"]);
+    SOUNDMANAGER.addSound("ghostAppear", ["G0004"]);
+    SOUNDMANAGER.addSound("spark", ["G0005"]);
+    SOUNDMANAGER.addSound("click", ["G0006"]);
   }
 
   this.levelselect = function(){
@@ -144,6 +157,9 @@ function gamemanager() {
     _this.levelSelectUI.destroy({children: true});
   }
 
+  this.endLevel = function() {
+    _this.levelselectinit();
+  }
 
   Container.call( this );
   this.init();

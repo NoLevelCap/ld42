@@ -358,6 +358,14 @@
                          "height":32,
                          "id":36,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":10
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
