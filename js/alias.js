@@ -8,6 +8,7 @@ var Container = PIXI.Container,
     Extras = PIXI.extras,
     Polygon = PIXI.Polygon,
     debug = new Debug(true),
+    Filter = PIXI.filters;
     Debug = debug,
     sharedticker = PIXI.ticker.shared,
     Console = console,

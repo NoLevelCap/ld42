@@ -9,6 +9,10 @@
  "tileheight":32,
  "tileproperties":
     {
+     "10":
+        {
+         "solid":true
+        },
      "100":
         {
          "shake":true
@@ -46,6 +50,14 @@
         {
          "solid":true
         },
+     "11":
+        {
+         "solid":true
+        },
+     "12":
+        {
+         "solid":true
+        },
      "121":
         {
          "toFloor":"",
@@ -73,6 +85,10 @@
          "solid":true
         },
      "127":
+        {
+         "solid":true
+        },
+     "129":
         {
          "solid":true
         },
@@ -147,6 +163,10 @@
          "shake":true,
          "solid":true
         },
+     "168":
+        {
+         "shake":true
+        },
      "180":
         {
          "toFloor":"",
@@ -177,6 +197,38 @@
          "shake":true,
          "type":"grave"
         },
+     "187":
+        {
+         "shake":true,
+         "solid":true
+        },
+     "203":
+        {
+         "colour":"blue",
+         "solid":true,
+         "type":"door"
+        },
+     "204":
+        {
+         "colour":"red",
+         "solid":true,
+         "type":"door"
+        },
+     "205":
+        {
+         "colour":"green",
+         "solid":true,
+         "type":"door"
+        },
+     "206":
+        {
+         "item":true,
+         "name":"picaxe"
+        },
+     "223":
+        {
+         "shake":true
+        },
      "25":
         {
          "solid":true
@@ -197,6 +249,14 @@
         {
          "shake":true,
          "torch":5
+        },
+     "30":
+        {
+         "solid":true
+        },
+     "32":
+        {
+         "solid":true
         },
      "44":
         {
@@ -223,6 +283,18 @@
          "solid":true
         },
      "5":
+        {
+         "solid":true
+        },
+     "50":
+        {
+         "solid":true
+        },
+     "51":
+        {
+         "solid":true
+        },
+     "52":
         {
          "solid":true
         },
@@ -311,6 +383,10 @@
     },
  "tilepropertytypes":
     {
+     "10":
+        {
+         "solid":"bool"
+        },
      "100":
         {
          "shake":"bool"
@@ -348,6 +424,14 @@
         {
          "solid":"bool"
         },
+     "11":
+        {
+         "solid":"bool"
+        },
+     "12":
+        {
+         "solid":"bool"
+        },
      "121":
         {
          "toFloor":"string",
@@ -375,6 +459,10 @@
          "solid":"bool"
         },
      "127":
+        {
+         "solid":"bool"
+        },
+     "129":
         {
          "solid":"bool"
         },
@@ -449,6 +537,10 @@
          "shake":"bool",
          "solid":"bool"
         },
+     "168":
+        {
+         "shake":"bool"
+        },
      "180":
         {
          "toFloor":"string",
@@ -479,6 +571,38 @@
          "shake":"bool",
          "type":"string"
         },
+     "187":
+        {
+         "shake":"bool",
+         "solid":"bool"
+        },
+     "203":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "204":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "205":
+        {
+         "colour":"string",
+         "solid":"bool",
+         "type":"string"
+        },
+     "206":
+        {
+         "item":"bool",
+         "name":"string"
+        },
+     "223":
+        {
+         "shake":"bool"
+        },
      "25":
         {
          "solid":"bool"
@@ -499,6 +623,14 @@
         {
          "shake":"bool",
          "torch":"int"
+        },
+     "30":
+        {
+         "solid":"bool"
+        },
+     "32":
+        {
+         "solid":"bool"
         },
      "44":
         {
@@ -525,6 +657,18 @@
          "solid":"bool"
         },
      "5":
+        {
+         "solid":"bool"
+        },
+     "50":
+        {
+         "solid":"bool"
+        },
+     "51":
+        {
+         "solid":"bool"
+        },
+     "52":
         {
          "solid":"bool"
         },

@@ -20,6 +20,7 @@ function SoundManager(){
 
     var sources = new Array();
 
+    console.log(ids);
     for (var i = 0; i < ids.length; i++) {
       sources.push("sound/" + _this.library[ids[i]].filepath);
     }

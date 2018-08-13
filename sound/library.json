@@ -17,12 +17,6 @@
     "filepath": "general/doorOpen1.mp3",
     "text": ""
   },
-  "T0001": {
-    "id": "T0001",
-    "name": "openingLines",
-    "filepath": "",
-    "text": ""
-  },
   "G0004": {
     "id": "G0004",
     "name": "ghostAppear",
@@ -46,5 +40,107 @@
     "name": "stairs",
     "filepath": "general/stairs1.mp3",
     "text": ""
+  },
+  "T0001": {
+    "id": "T0001",
+    "name": "introline",
+    "filepath": "",
+    "text": "Welcome to “Haunts TV” where we banish ghosts! Today we’re at an abandoned lodge, and I’ve got to get inside somehow. Press ‘W’ to walk."
+  },
+  "T0002": {
+    "id": "T0002",
+    "name": "doorline",
+    "filepath": "",
+    "text": "Blue door lock, must be a blue key around."
+  },
+  "T0003": {
+    "id": "T0003",
+    "name": "entranceline",
+    "filepath": "",
+    "text": "Anyone home???"
+  },
+  "T0004": {
+    "id": "T0004",
+    "name": "onentrance",
+    "filepath": "",
+    "text": "I better look around…"
+  },
+  "T0005": {
+    "id": "T0005",
+    "name": "dingdong",
+    "filepath": "",
+    "text": "[Ding Dong]"
+  },
+  "T0006": {
+    "id": "T0006",
+    "name": "lookaround",
+    "filepath": "",
+    "text": "Use your mouse to look around"
+  },
+  "T0007": {
+    "id": "T0007",
+    "name": "camera",
+    "filepath": "",
+    "text": "It's a bit dark in here, better get my night vision camera out. Press the 'Q' button"
+  },
+  "T0008": {
+    "id": "T0008",
+    "name": "cameraRunningLow",
+    "filepath": "",
+    "text": "Shame I only have a limited tape size on my night vision camera"
+  },
+  "T0009": {
+    "id": "T0009",
+    "name": "skull",
+    "filepath": "",
+    "text": "A rare artifact - The chieftains skull"
+  },
+  "T0010": {
+    "id": "T0010",
+    "name": "burialGround",
+    "filepath": "",
+    "text": "Behind this door are the foundations of this building"
+  },
+  "T0011": {
+    "id": "T0011",
+    "name": "story",
+    "filepath": "",
+    "text": "Legend says that this lodge was built on a old burial ground. Only the skull of the chieftan can restore sanctity to this tomb"
+  },
+  "E0001": {
+    "id": "E0001",
+    "name": "endGame",
+    "filepath": "",
+    "text": "It's a dug up grave... Looks like it's missing something"
+  },
+  "T0012": {
+    "id": "T0012",
+    "name": "mineIntro",
+    "filepath": "",
+    "text": "Welcome back to \"Haunts TV\"! We've received a tip off about a haunted mine so we're going in to investigate. Rumour has it a miner haunts the caves here and he won't rest until the last gold ore has been mined!"
+  },
+  "T0013": {
+    "id": "T0013",
+    "name": "mineCart",
+    "filepath": "",
+    "text": "Tracks? I wonder if they lead anywhere..."
+  },
+  "T0014": {
+    "id": "T0014",
+    "name": "oreIntro",
+    "filepath": "",
+    "text": "Hey look, some gold ore, I just need to find a pickaxe to mine it"
+  },
+  "T0015": {
+    "id": "T0015",
+    "name": "picaxe",
+    "filepath": "",
+    "text": "This must be the ghost miners pickaxe!"
+  },
+  "E0002": {
+    "id": "E0002",
+    "name": "ore2",
+    "filepath": "",
+    "text": "Still need that pickaxe..."
   }
 }

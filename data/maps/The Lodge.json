@@ -13,7 +13,7 @@
                  "width":100,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Object Layer",
@@ -37,7 +37,7 @@
                          "width":32,
                          "x":1536,
                          "y":1728
-                        },
+                        }, 
                         {
                          "gid":141,
                          "height":32,
@@ -49,7 +49,7 @@
                          "width":32,
                          "x":1536,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":122,
                          "height":32,
@@ -69,7 +69,7 @@
                          "width":32,
                          "x":2240,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -81,7 +81,7 @@
                          "width":32,
                          "x":1440,
                          "y":1664
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -93,7 +93,7 @@
                          "width":32,
                          "x":2304,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":103,
                          "height":32,
@@ -105,7 +105,7 @@
                          "width":32,
                          "x":2304,
                          "y":1600
-                        },
+                        }, 
                         {
                          "gid":184,
                          "height":32,
@@ -117,7 +117,7 @@
                          "width":32,
                          "x":1472,
                          "y":1664
-                        },
+                        }, 
                         {
                          "gid":185,
                          "height":32,
@@ -129,7 +129,7 @@
                          "width":32,
                          "x":1408,
                          "y":1760
-                        },
+                        }, 
                         {
                          "gid":143,
                          "height":32,
@@ -141,7 +141,7 @@
                          "width":32,
                          "x":1376,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":183,
                          "height":32,
@@ -153,7 +153,7 @@
                          "width":32,
                          "x":1504,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":167,
                          "height":32,
@@ -165,7 +165,7 @@
                          "width":32,
                          "x":1312,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":168,
                          "height":32,
@@ -177,7 +177,7 @@
                          "width":32,
                          "x":1216,
                          "y":1600
-                        },
+                        }, 
                         {
                          "gid":168,
                          "height":32,
@@ -189,7 +189,7 @@
                          "width":32,
                          "x":1184,
                          "y":1664
-                        },
+                        }, 
                         {
                          "gid":168,
                          "height":32,
@@ -201,7 +201,7 @@
                          "width":32,
                          "x":1248,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":167,
                          "height":32,
@@ -213,7 +213,7 @@
                          "width":32,
                          "x":1216,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":187,
                          "height":32,
@@ -225,7 +225,7 @@
                          "width":32,
                          "x":1280,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":167,
                          "height":32,
@@ -243,11 +243,36 @@
                  "visible":true,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Trigger Layer",
                  "objects":[
+                        {
+                         "height":32,
+                         "id":193,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "interactable":true,
+                             "text":"E0001",
+                             "type":"endGame"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "interactable":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1280,
+                         "y":1600
+                        }, 
                         {
                          "height":32,
                          "id":202,
@@ -266,9 +291,9 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":2720,
-                         "y":1472
-                        },
+                         "x":2240,
+                         "y":1536
+                        }, 
                         {
                          "height":32,
                          "id":203,
@@ -287,26 +312,22 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":1984,
-                         "y":1600
-                        },
+                         "x":1504,
+                         "y":1664
+                        }, 
                         {
                          "height":32,
-                         "id":206,
+                         "id":220,
                          "name":"",
                          "properties":
                             {
                              "active":true,
-                             "interactable":true,
-                             "singular":false,
-                             "text":"DING DONG",
+                             "text":"T0010",
                              "type":"queueText"
                             },
                          "propertytypes":
                             {
                              "active":"bool",
-                             "interactable":"bool",
-                             "singular":"bool",
                              "text":"string",
                              "type":"string"
                             },
@@ -314,11 +335,9 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":1760,
-                         "y":1536
+                         "x":1408,
+                         "y":1664
                         }],
-                 "offsetx":-480,
-                 "offsety":64,
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -331,7 +350,7 @@
          "visible":true,
          "x":0,
          "y":0
-        },
+        }, 
         {
          "layers":[
                 {
@@ -352,7 +371,7 @@
                  "width":100,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Object Layer",
@@ -362,21 +381,13 @@
                          "height":32,
                          "id":36,
                          "name":"",
-                         "properties":
-                            {
-                             "torch":10
-                            },
-                         "propertytypes":
-                            {
-                             "torch":"int"
-                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
                          "width":32,
                          "x":1760,
                          "y":1472
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -388,7 +399,7 @@
                          "width":32,
                          "x":2112,
                          "y":1472
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -400,7 +411,7 @@
                          "width":32,
                          "x":1888,
                          "y":1376
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -412,7 +423,7 @@
                          "width":32,
                          "x":1984,
                          "y":1376
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -424,7 +435,7 @@
                          "width":32,
                          "x":1568,
                          "y":1504
-                        },
+                        }, 
                         {
                          "gid":108,
                          "height":32,
@@ -436,7 +447,7 @@
                          "width":32,
                          "x":1856,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":110,
                          "height":32,
@@ -448,7 +459,7 @@
                          "width":32,
                          "x":2016,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":110,
                          "height":32,
@@ -460,7 +471,7 @@
                          "width":32,
                          "x":2112,
                          "y":1856
-                        },
+                        }, 
                         {
                          "gid":110,
                          "height":32,
@@ -472,7 +483,7 @@
                          "width":32,
                          "x":2304,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":70,
                          "height":32,
@@ -484,7 +495,7 @@
                          "width":32,
                          "x":2304,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -496,7 +507,7 @@
                          "width":32,
                          "x":1888,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -508,7 +519,7 @@
                          "width":32,
                          "x":1920,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -520,7 +531,7 @@
                          "width":32,
                          "x":1952,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -532,7 +543,7 @@
                          "width":32,
                          "x":1984,
                          "y":1888
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -544,7 +555,7 @@
                          "width":32,
                          "x":2048,
                          "y":1856
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -556,7 +567,7 @@
                          "width":32,
                          "x":2080,
                          "y":1856
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -568,7 +579,7 @@
                          "width":32,
                          "x":2144,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -580,7 +591,7 @@
                          "width":32,
                          "x":2176,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -592,7 +603,7 @@
                          "width":32,
                          "x":2208,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -604,7 +615,7 @@
                          "width":32,
                          "x":2240,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -616,7 +627,7 @@
                          "width":32,
                          "x":2272,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -628,7 +639,7 @@
                          "width":32,
                          "x":2208,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -640,7 +651,7 @@
                          "width":32,
                          "x":2240,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":69,
                          "height":32,
@@ -652,7 +663,7 @@
                          "width":32,
                          "x":2272,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -664,7 +675,7 @@
                          "width":32,
                          "x":2304,
                          "y":1664
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -676,7 +687,7 @@
                          "width":32,
                          "x":2304,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -688,7 +699,7 @@
                          "width":32,
                          "x":2304,
                          "y":1728
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -700,7 +711,7 @@
                          "width":32,
                          "x":2304,
                          "y":1760
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -712,7 +723,7 @@
                          "width":32,
                          "x":2304,
                          "y":1792
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -724,7 +735,7 @@
                          "width":32,
                          "x":1856,
                          "y":1728
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -736,7 +747,7 @@
                          "width":32,
                          "x":1856,
                          "y":1760
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -748,7 +759,7 @@
                          "width":32,
                          "x":1856,
                          "y":1792
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -760,7 +771,7 @@
                          "width":32,
                          "x":1856,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":90,
                          "height":32,
@@ -772,7 +783,7 @@
                          "width":32,
                          "x":1856,
                          "y":1856
-                        },
+                        }, 
                         {
                          "gid":68,
                          "height":32,
@@ -784,7 +795,7 @@
                          "width":32,
                          "x":2112,
                          "y":1824
-                        },
+                        }, 
                         {
                          "gid":68,
                          "height":32,
@@ -796,7 +807,7 @@
                          "width":32,
                          "x":2016,
                          "y":1856
-                        },
+                        }, 
                         {
                          "gid":88,
                          "height":32,
@@ -808,19 +819,7 @@
                          "width":32,
                          "x":2112,
                          "y":1792
-                        },
-                        {
-                         "gid":88,
-                         "height":32,
-                         "id":76,
-                         "name":"",
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":2112,
-                         "y":1728
-                        },
+                        }, 
                         {
                          "gid":101,
                          "height":32,
@@ -832,7 +831,7 @@
                          "width":32,
                          "x":1792,
                          "y":1472
-                        },
+                        }, 
                         {
                          "gid":102,
                          "height":32,
@@ -844,7 +843,7 @@
                          "width":32,
                          "x":1536,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":103,
                          "height":32,
@@ -856,7 +855,7 @@
                          "width":32,
                          "x":1504,
                          "y":1568
-                        },
+                        }, 
                         {
                          "gid":103,
                          "height":32,
@@ -868,7 +867,7 @@
                          "width":32,
                          "x":1600,
                          "y":1632
-                        },
+                        }, 
                         {
                          "gid":87,
                          "height":32,
@@ -880,7 +879,7 @@
                          "width":32,
                          "x":1920,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":87,
                          "height":32,
@@ -892,7 +891,7 @@
                          "width":32,
                          "x":1952,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":107,
                          "height":32,
@@ -904,7 +903,7 @@
                          "width":32,
                          "x":2208,
                          "y":1664
-                        },
+                        }, 
                         {
                          "gid":122,
                          "height":32,
@@ -924,7 +923,7 @@
                          "width":32,
                          "x":1920,
                          "y":1376
-                        },
+                        }, 
                         {
                          "gid":122,
                          "height":32,
@@ -944,7 +943,7 @@
                          "width":32,
                          "x":1952,
                          "y":1376
-                        },
+                        }, 
                         {
                          "gid":123,
                          "height":32,
@@ -964,7 +963,7 @@
                          "width":32,
                          "x":2240,
                          "y":1568
-                        },
+                        }, 
                         {
                          "gid":122,
                          "height":32,
@@ -976,7 +975,7 @@
                          "width":32,
                          "x":1920,
                          "y":1344
-                        },
+                        }, 
                         {
                          "gid":122,
                          "height":32,
@@ -988,7 +987,7 @@
                          "width":32,
                          "x":1952,
                          "y":1344
-                        },
+                        }, 
                         {
                          "gid":161,
                          "height":32,
@@ -1008,7 +1007,7 @@
                          "width":32,
                          "x":2336,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":141,
                          "height":32,
@@ -1020,7 +1019,7 @@
                          "width":32,
                          "x":2336,
                          "y":1504
-                        },
+                        }, 
                         {
                          "gid":182,
                          "height":32,
@@ -1040,7 +1039,7 @@
                          "width":32,
                          "x":1504,
                          "y":1728
-                        },
+                        }, 
                         {
                          "gid":163,
                          "height":32,
@@ -1052,7 +1051,7 @@
                          "width":32,
                          "x":1664,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":87,
                          "height":32,
@@ -1064,7 +1063,7 @@
                          "width":32,
                          "x":2208,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":185,
                          "height":32,
@@ -1076,7 +1075,7 @@
                          "width":32,
                          "x":1504,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":185,
                          "height":32,
@@ -1088,7 +1087,7 @@
                          "width":32,
                          "x":1568,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":167,
                          "height":32,
@@ -1100,7 +1099,7 @@
                          "width":32,
                          "x":2240,
                          "y":1696
-                        },
+                        }, 
                         {
                          "gid":168,
                          "height":32,
@@ -1112,7 +1111,7 @@
                          "width":32,
                          "x":2272,
                          "y":1792
-                        },
+                        }, 
                         {
                          "gid":89,
                          "height":32,
@@ -1130,7 +1129,7 @@
                  "visible":true,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Trigger Layer",
@@ -1157,7 +1156,7 @@
                          "width":64,
                          "x":1920,
                          "y":1568
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":180,
@@ -1178,38 +1177,15 @@
                          "width":32,
                          "x":1952,
                          "y":1440
-                        },
+                        }, 
                         {
-                         "height":96,
+                         "height":32,
                          "id":186,
                          "name":"",
                          "properties":
                             {
                              "active":true,
-                             "text":"Hello and welcome to Ghost Hunters TV! We're here at a creepy mansion... the doors are locked though, looks like I'll have to try and find a key first.",
-                             "type":"queueText"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "text":"string",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":128,
-                         "x":1888,
-                         "y":1760
-                        },
-                        {
-                         "height":32,
-                         "id":189,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "text":"Hmm I can probably use this key to unlock the front door",
+                             "text":"T0001",
                              "type":"queueText"
                             },
                          "propertytypes":
@@ -1222,32 +1198,9 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":2208,
-                         "y":1632
-                        },
-                        {
-                         "height":32,
-                         "id":190,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "text":"Is that a g... g... ghost!!",
-                             "type":"queueText"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "text":"string",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":64,
-                         "x":1920,
-                         "y":1632
-                        },
+                         "x":1888,
+                         "y":1824
+                        }, 
                         {
                          "height":256,
                          "id":197,
@@ -1268,7 +1221,7 @@
                          "width":160,
                          "x":1504,
                          "y":1472
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":198,
@@ -1289,7 +1242,7 @@
                          "width":32,
                          "x":2240,
                          "y":1664
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":199,
@@ -1310,7 +1263,7 @@
                          "width":32,
                          "x":2272,
                          "y":1760
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":204,
@@ -1320,7 +1273,7 @@
                              "active":true,
                              "interactable":true,
                              "singular":false,
-                             "text":"DING DONG",
+                             "text":"T0005",
                              "type":"queueText"
                             },
                          "propertytypes":
@@ -1337,6 +1290,144 @@
                          "width":32,
                          "x":1792,
                          "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":205,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0006",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":128,
+                         "x":1888,
+                         "y":1792
+                        }, 
+                        {
+                         "height":32,
+                         "id":206,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0002",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":64,
+                         "x":1920,
+                         "y":1696
+                        }, 
+                        {
+                         "height":128,
+                         "id":207,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0004",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":128,
+                         "x":1888,
+                         "y":1408
+                        }, 
+                        {
+                         "height":32,
+                         "id":209,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0003",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":64,
+                         "x":1920,
+                         "y":1632
+                        }, 
+                        {
+                         "height":32,
+                         "id":210,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0007",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":64,
+                         "x":1920,
+                         "y":1568
+                        }, 
+                        {
+                         "height":32,
+                         "id":211,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0008",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2240,
+                         "y":1504
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1350,7 +1441,7 @@
          "visible":false,
          "x":0,
          "y":0
-        },
+        }, 
         {
          "layers":[
                 {
@@ -1371,7 +1462,7 @@
                  "width":100,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Object Layer",
@@ -1395,7 +1486,7 @@
                          "width":32,
                          "x":1920,
                          "y":1408
-                        },
+                        }, 
                         {
                          "gid":123,
                          "height":32,
@@ -1415,7 +1506,7 @@
                          "width":32,
                          "x":1952,
                          "y":1408
-                        },
+                        }, 
                         {
                          "gid":182,
                          "height":32,
@@ -1435,7 +1526,7 @@
                          "width":32,
                          "x":2304,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":101,
                          "height":32,
@@ -1447,7 +1538,7 @@
                          "width":32,
                          "x":1792,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":121,
                          "height":32,
@@ -1459,7 +1550,7 @@
                          "width":32,
                          "x":1792,
                          "y":1312
-                        },
+                        }, 
                         {
                          "gid":103,
                          "height":32,
@@ -1471,7 +1562,7 @@
                          "width":32,
                          "x":2464,
                          "y":1568
-                        },
+                        }, 
                         {
                          "gid":143,
                          "height":32,
@@ -1483,7 +1574,7 @@
                          "width":32,
                          "x":2112,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":144,
                          "height":32,
@@ -1495,7 +1586,7 @@
                          "width":32,
                          "x":2464,
                          "y":1536
-                        },
+                        }, 
                         {
                          "gid":163,
                          "height":32,
@@ -1507,7 +1598,7 @@
                          "width":32,
                          "x":1728,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":164,
                          "height":32,
@@ -1519,7 +1610,7 @@
                          "width":32,
                          "x":2176,
                          "y":1216
-                        },
+                        }, 
                         {
                          "gid":89,
                          "height":32,
@@ -1531,7 +1622,7 @@
                          "width":32,
                          "x":2048,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":89,
                          "height":32,
@@ -1543,7 +1634,7 @@
                          "width":32,
                          "x":2368,
                          "y":1504
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -1555,7 +1646,7 @@
                          "width":32,
                          "x":1856,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -1567,7 +1658,7 @@
                          "width":32,
                          "x":2016,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -1579,7 +1670,7 @@
                          "width":32,
                          "x":2176,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -1591,7 +1682,7 @@
                          "width":32,
                          "x":1696,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
@@ -1603,19 +1694,27 @@
                          "width":32,
                          "x":2432,
                          "y":1504
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
                          "id":143,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":10
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
                          "width":32,
                          "x":2144,
                          "y":1184
-                        },
+                        }, 
                         {
                          "gid":183,
                          "height":32,
@@ -1627,31 +1726,47 @@
                          "width":32,
                          "x":1984,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
                          "id":146,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":7
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
                          "width":32,
                          "x":1664,
                          "y":1152
-                        },
+                        }, 
                         {
                          "gid":30,
                          "height":32,
                          "id":147,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":7
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
                          "width":32,
                          "x":1792,
                          "y":1152
-                        },
+                        }, 
                         {
                          "gid":184,
                          "height":32,
@@ -1663,7 +1778,7 @@
                          "width":32,
                          "x":1728,
                          "y":1152
-                        },
+                        }, 
                         {
                          "gid":183,
                          "height":32,
@@ -1675,7 +1790,7 @@
                          "width":32,
                          "x":1760,
                          "y":1216
-                        },
+                        }, 
                         {
                          "gid":185,
                          "height":32,
@@ -1687,19 +1802,27 @@
                          "width":32,
                          "x":2336,
                          "y":1600
-                        },
+                        }, 
                         {
                          "gid":186,
                          "height":32,
                          "id":165,
                          "name":"",
+                         "properties":
+                            {
+                             "name":"endGameItem"
+                            },
+                         "propertytypes":
+                            {
+                             "name":"string"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
                          "width":32,
                          "x":1760,
                          "y":1184
-                        },
+                        }, 
                         {
                          "gid":185,
                          "height":32,
@@ -1711,7 +1834,7 @@
                          "width":32,
                          "x":1888,
                          "y":1280
-                        },
+                        }, 
                         {
                          "gid":149,
                          "height":32,
@@ -1729,7 +1852,7 @@
                  "visible":true,
                  "x":0,
                  "y":0
-                },
+                }, 
                 {
                  "draworder":"topdown",
                  "name":"Trigger Layer",
@@ -1754,7 +1877,7 @@
                          "width":32,
                          "x":1728,
                          "y":1152
-                        },
+                        }, 
                         {
                          "height":64,
                          "id":169,
@@ -1781,7 +1904,7 @@
                          "width":64,
                          "x":2080,
                          "y":1280
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":181,
@@ -1803,8 +1926,8 @@
                          "visible":true,
                          "width":32,
                          "x":1728,
-                         "y":1216
-                        },
+                         "y":1248
+                        }, 
                         {
                          "height":32,
                          "id":182,
@@ -1825,30 +1948,7 @@
                          "width":32,
                          "x":2208,
                          "y":1280
-                        },
-                        {
-                         "height":32,
-                         "id":192,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "text":"A skull? Maybe I should return it to the grave in the basement!",
-                             "type":"queueText"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "text":"string",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1760,
-                         "y":1152
-                        },
+                        }, 
                         {
                          "height":64,
                          "id":200,
@@ -1869,7 +1969,7 @@
                          "width":448,
                          "x":1728,
                          "y":1472
-                        },
+                        }, 
                         {
                          "height":32,
                          "id":201,
@@ -1890,6 +1990,52 @@
                          "width":32,
                          "x":2464,
                          "y":1504
+                        }, 
+                        {
+                         "height":32,
+                         "id":212,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0009",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1728,
+                         "y":1216
+                        }, 
+                        {
+                         "height":64,
+                         "id":214,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "text":"T0011",
+                             "type":"queueText"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":64,
+                         "x":1920,
+                         "y":1312
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1904,12 +2050,12 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":207,
+ "nextobjectid":223,
  "orientation":"orthogonal",
  "properties":
     {
-     "spawnX":60,
-     "spawnY":56
+     "spawnX":59,
+     "spawnY":57
     },
  "propertytypes":
     {

@@ -31,18 +31,23 @@ function triggerCode(){
   this.queueText = function(trigger) {
     if (trigger.objData.active) {
       trigger.objData.active = false;
-      GAMEMANAGER.textmanager.queueText(trigger.objData.text);
+      GAMEMANAGER.textmanager.queueText(SOUNDMANAGER.library[trigger.objData.text].text);
       GAMEMANAGER.textmanager.showText();
     }
   }
 
-  this.endGame = function(trigger) {
-    if (GAMEMANAGER.player.checkInventory("skull")) {
+  this.endGame = function(trigger){
+    if (GAMEMANAGER.player.checkInventory("endGameItem")) {
      GAMEMANAGER.endLevel();
     } else {
-     GAMEMANAGER.textmanager.queueText("It looks like an open grave, maybe I should find something to put in it");
+     GAMEMANAGER.textmanager.queueText(SOUNDMANAGER.library[trigger.objData.text].text);
     }
   }
+
+
+/*
+
+*/
 
 
 }

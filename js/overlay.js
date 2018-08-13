@@ -27,9 +27,7 @@ function overlay() {
       _this.addChild(_inThis.overlay);
 
       _inThis.mask = new Graphics();
-
-
-
+      _inThis.overlay.addChild(_inThis.mask);
 
     }
 
@@ -49,7 +47,7 @@ function overlay() {
       var objectsOnFloor = GAMEMANAGER.Map.objdata[GAMEMANAGER.Map.currentFloor];
 
       _inThis.mask.clear();
-      _inThis.mask.beginFill(0xFF);
+      _inThis.mask.beginFill(0xFF, 0.1);
       _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       for (var i = 0; i < objectsOnFloor.length; i++) {
         var obj = objectsOnFloor[i];
@@ -112,12 +110,20 @@ function overlay() {
     this.show = function(){
       console.log("Camera Mask");
       GAMEMANAGER.gameContainer.mask = _inThis.mask;
+      /*GAMEMANAGER.gameContainer.filters = [
+        GAMEMANAGER.gameContainer.blur,
+        //GAMEMANAGER.gameContainer.glitch,
+        GAMEMANAGER.gameContainer.crt,
+      ];*/
       _inThis.overlay.visible = true;
     }
 
     this.hide = function(){
       GAMEMANAGER.gameContainer.mask = undefined;
       _inThis.overlay.visible = false;
+      /*GAMEMANAGER.gameContainer.filters = [
+        GAMEMANAGER.gameContainer.blur,
+      ];*/
     }
 
     this.process = function(){
