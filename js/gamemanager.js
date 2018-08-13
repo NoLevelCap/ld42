@@ -136,7 +136,8 @@ function gamemanager() {
     }
 
     SOUNDMANAGER.addSound("example", ["G0001"]);
-    SOUNDMANAGER.getSound("example").play();
+    SOUNDMANAGER.addSound("pickup", ["G0002"]);
+    SOUNDMANAGER.addSound("openDoor", ["G0003"]);
   }
 
   this.levelselect = function(){
