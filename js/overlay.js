@@ -29,8 +29,6 @@ function overlay() {
       _inThis.mask = new Graphics();
       _inThis.overlay.addChild(_inThis.mask);
 
-
-
     }
 
     this.show = function(){
@@ -112,12 +110,20 @@ function overlay() {
     this.show = function(){
       console.log("Camera Mask");
       GAMEMANAGER.gameContainer.mask = _inThis.mask;
+      /*GAMEMANAGER.gameContainer.filters = [
+        GAMEMANAGER.gameContainer.blur,
+        //GAMEMANAGER.gameContainer.glitch,
+        GAMEMANAGER.gameContainer.crt,
+      ];*/
       _inThis.overlay.visible = true;
     }
 
     this.hide = function(){
       GAMEMANAGER.gameContainer.mask = undefined;
       _inThis.overlay.visible = false;
+      /*GAMEMANAGER.gameContainer.filters = [
+        GAMEMANAGER.gameContainer.blur,
+      ];*/
     }
 
     this.process = function(){
