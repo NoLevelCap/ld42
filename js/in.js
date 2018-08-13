@@ -10,6 +10,7 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 loader
   .add("img/packed.json")
   .add("img/mapicons.json")
+  .add("Library", "sound/library.json")
   .load(setup);
 
 //Define any variables that are used in more than one function
@@ -22,6 +23,8 @@ function setup() {
 
   Tex_Main = PIXI.loader.resources["img/packed.json"].textures;
   Map_Icons = PIXI.loader.resources["img/mapicons.json"].textures;
+
+  SOUNDMANAGER = new SoundManager();
 
   GAMEMANAGER = new gamemanager();
   //state = GAMEMANAGER.maingameinit;

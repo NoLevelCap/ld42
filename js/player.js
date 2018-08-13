@@ -106,13 +106,46 @@ function player() {
     GAMEMANAGER.Map.setPosition(x, y);
   }
 
+  this.checkInteractable = function(){
+    for (var triggerid in GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor]) {
+      if (GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor].hasOwnProperty(triggerid)) {
+        var trigger = GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor][triggerid];
+
+        if(trigger.objData.active && trigger.objData.interactable){
+          var worldX = _this.position.x - GAMEMANAGER.Map.position.x;
+          var worldY = _this.position.y - GAMEMANAGER.Map.position.y;
+          var rect = trigger.bounds;
+
+          if(rect.contains(worldX, worldY)){
+            GAMEMANAGER.interactable = true;
+          }
+        }
+      }
+    }
+  }
+
+  this.selectInteractable = function(){
+    for (var triggerid in GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor]) {
+      if (GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor].hasOwnProperty(triggerid)) {
+        var trigger = GAMEMANAGER.Map.triggerdata[GAMEMANAGER.Map.currentFloor][triggerid];
+
+        if(trigger.objData.active && trigger.objData.interactable){
+          var worldX = _this.position.x - GAMEMANAGER.Map.position.x;
+          var worldY = _this.position.y - GAMEMANAGER.Map.position.y;
+          var rect = trigger.bounds;
+
+          if(rect.contains(worldX, worldY)){
+            trigger.trigger();
+          }
+        }
+      }
+    }
+  }
+
   this.animatable = function(){
 
     if (!paused) {
 
-    GAMEMANAGER.interactable = false;
-    GAMEMANAGER.Map.checkDoors(_this.mapx, _this.mapy, _this.facing);
-    GAMEMANAGER.Map.checkObjects(_this.mapx, _this.mapy);
 
     if (_this.moveD != 0 || _this.moveS != 0) {
       _this.movementTimer -= 1;
@@ -121,6 +154,11 @@ function player() {
         _this.move(_this.moveD, _this.moveS);
       }
     }
+
+    GAMEMANAGER.interactable = false;
+    GAMEMANAGER.Map.checkDoors(_this.mapx, _this.mapy, _this.facing);
+    GAMEMANAGER.Map.checkObjects(_this.mapx, _this.mapy);
+    _this.checkInteractable();
 
     var mousePos = renderer.plugins.interaction.mouse.global;
 
@@ -155,6 +193,8 @@ function player() {
       _this.setFacing("W");
       _this.changeSprite(7);
     }
+
+
   }
   }
 
