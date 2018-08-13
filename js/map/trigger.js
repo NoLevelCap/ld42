@@ -31,7 +31,7 @@ function triggerCode(){
   this.queueText = function(trigger) {
     if (trigger.objData.active) {
       trigger.objData.active = false;
-      GAMEMANAGER.textmanager.queueText(trigger.objData.text);
+      GAMEMANAGER.textmanager.queueText(SOUNDMANAGER.library[trigger.objData.text].text);
       GAMEMANAGER.textmanager.showText();
     }
   }

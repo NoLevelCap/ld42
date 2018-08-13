@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="206">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="215">
  <properties>
-  <property name="spawnX" type="int" value="60"/>
-  <property name="spawnY" type="int" value="56"/>
+  <property name="spawnX" type="int" value="59"/>
+  <property name="spawnY" type="int" value="57"/>
  </properties>
  <tileset firstgid="1" source="baseTiles.tsx"/>
  <group name="Basement">
@@ -136,8 +136,22 @@
    <object id="175" gid="167" x="1216" y="1632" width="32" height="32"/>
    <object id="176" gid="187" x="1280" y="1632" width="32" height="32"/>
    <object id="177" gid="167" x="1280" y="1600" width="32" height="32"/>
+   <object id="213" x="1408" y="1664" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0010"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup name="Trigger Layer" offsetx="-480" offsety="64">
+   <object id="193" x="1760" y="1536" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="Nothing happens"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
    <object id="202" x="2720" y="1472" width="32" height="32">
     <properties>
      <property name="active" type="bool" value="false"/>
@@ -148,14 +162,6 @@
     <properties>
      <property name="active" type="bool" value="false"/>
      <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
-   <object id="205" x="1760" y="1536" width="32" height="32">
-    <properties>
-     <property name="active" type="bool" value="true"/>
-     <property name="interactable" type="bool" value="true"/>
-     <property name="singular" type="bool" value="false"/>
-     <property name="type" value="endGame"/>
     </properties>
    </object>
   </objectgroup>
@@ -269,11 +275,7 @@
 </data>
   </layer>
   <objectgroup name="Object Layer">
-   <object id="36" gid="30" x="1760" y="1472" width="32" height="32">
-    <properties>
-     <property name="torch" type="int" value="10"/>
-    </properties>
-   </object>
+   <object id="36" gid="30" x="1760" y="1472" width="32" height="32"/>
    <object id="37" gid="30" x="2112" y="1472" width="32" height="32"/>
    <object id="38" gid="30" x="1888" y="1376" width="32" height="32"/>
    <object id="39" gid="30" x="1984" y="1376" width="32" height="32"/>
@@ -310,7 +312,6 @@
    <object id="70" gid="68" x="2112" y="1824" width="32" height="32"/>
    <object id="71" gid="68" x="2016" y="1856" width="32" height="32"/>
    <object id="73" gid="88" x="2112" y="1792" width="32" height="32"/>
-   <object id="76" gid="88" x="2112" y="1728" width="32" height="32"/>
    <object id="77" gid="101" x="1792" y="1472" width="32" height="32"/>
    <object id="91" gid="102" x="1536" y="1632" width="32" height="32"/>
    <object id="93" gid="103" x="1504" y="1568" width="32" height="32"/>
@@ -368,24 +369,10 @@
      <property name="type" value="ghostSpawn"/>
     </properties>
    </object>
-   <object id="186" x="1888" y="1760" width="128" height="96">
+   <object id="186" x="1888" y="1824" width="32" height="32">
     <properties>
      <property name="active" type="bool" value="true"/>
-     <property name="text" value="Hello and welcome to Ghost Hunters TV! We're here at a creepy mansion... the doors are locked though, looks like I'll have to try and find a key first."/>
-     <property name="type" value="queueText"/>
-    </properties>
-   </object>
-   <object id="189" x="2208" y="1632" width="32" height="32">
-    <properties>
-     <property name="active" type="bool" value="true"/>
-     <property name="text" value="Hmm I can probably use this key to unlock the front door"/>
-     <property name="type" value="queueText"/>
-    </properties>
-   </object>
-   <object id="190" x="1920" y="1632" width="64" height="32">
-    <properties>
-     <property name="active" type="bool" value="true"/>
-     <property name="text" value="Is that a g... g... ghost!!"/>
+     <property name="text" value="T0001"/>
      <property name="type" value="queueText"/>
     </properties>
    </object>
@@ -412,7 +399,49 @@
      <property name="active" type="bool" value="true"/>
      <property name="interactable" type="bool" value="true"/>
      <property name="singular" type="bool" value="false"/>
-     <property name="text" value="DING DONG"/>
+     <property name="text" value="T0005"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="205" x="1888" y="1792" width="128" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0006"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="206" x="1920" y="1696" width="64" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0002"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="207" x="1888" y="1440" width="128" height="64">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0004"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="209" x="1920" y="1632" width="64" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0003"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="210" x="1920" y="1536" width="64" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0007"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="211" x="2240" y="1504" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0008"/>
      <property name="type" value="queueText"/>
     </properties>
    </object>
@@ -556,10 +585,22 @@
    <object id="139" gid="30" x="2176" y="1280" width="32" height="32"/>
    <object id="140" gid="30" x="1696" y="1280" width="32" height="32"/>
    <object id="141" gid="30" x="2432" y="1504" width="32" height="32"/>
-   <object id="143" gid="30" x="2144" y="1184" width="32" height="32"/>
+   <object id="143" gid="30" x="2144" y="1184" width="32" height="32">
+    <properties>
+     <property name="torch" type="int" value="10"/>
+    </properties>
+   </object>
    <object id="144" gid="183" x="1984" y="1280" width="32" height="32"/>
-   <object id="146" gid="30" x="1664" y="1152" width="32" height="32"/>
-   <object id="147" gid="30" x="1792" y="1152" width="32" height="32"/>
+   <object id="146" gid="30" x="1664" y="1152" width="32" height="32">
+    <properties>
+     <property name="torch" type="int" value="7"/>
+    </properties>
+   </object>
+   <object id="147" gid="30" x="1792" y="1152" width="32" height="32">
+    <properties>
+     <property name="torch" type="int" value="7"/>
+    </properties>
+   </object>
    <object id="148" gid="184" x="1728" y="1152" width="32" height="32"/>
    <object id="149" gid="183" x="1760" y="1216" width="32" height="32"/>
    <object id="150" gid="185" x="2336" y="1600" width="32" height="32"/>
@@ -583,7 +624,7 @@
      <property name="type" value="ghostTrigger"/>
     </properties>
    </object>
-   <object id="181" x="1728" y="1216" width="32" height="32">
+   <object id="181" x="1728" y="1248" width="32" height="32">
     <properties>
      <property name="active" type="bool" value="true"/>
      <property name="spawnid" type="int" value="166"/>
@@ -596,13 +637,6 @@
      <property name="type" value="ghostSpawn"/>
     </properties>
    </object>
-   <object id="192" x="1760" y="1152" width="32" height="32">
-    <properties>
-     <property name="active" type="bool" value="true"/>
-     <property name="text" value="A skull? Maybe I should return it to the grave in the basement!"/>
-     <property name="type" value="queueText"/>
-    </properties>
-   </object>
    <object id="200" x="1728" y="1472" width="448" height="64">
     <properties>
      <property name="active" type="bool" value="false"/>
@@ -613,6 +647,20 @@
     <properties>
      <property name="active" type="bool" value="false"/>
      <property name="type" value="ghostTransferPoint"/>
+    </properties>
+   </object>
+   <object id="212" x="1728" y="1216" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0009"/>
+     <property name="type" value="queueText"/>
+    </properties>
+   </object>
+   <object id="214" x="1920" y="1312" width="64" height="64">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="text" value="T0011"/>
+     <property name="type" value="queueText"/>
     </properties>
    </object>
   </objectgroup>
