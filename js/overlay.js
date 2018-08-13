@@ -63,7 +63,6 @@ function overlay() {
         }
 
 
-
         if(!(torch === undefined)){
           var diff = 2;
           var ran = 0;
@@ -75,7 +74,6 @@ function overlay() {
           }
 
           var amount = torch*(10-diff) + Math.abs(torch*diff*Math.sin((Date.now()+ran)/1000));
-          console.log("drawing");
           _inThis.mask.drawCircle(screenX,screenY, amount);
         }
       }

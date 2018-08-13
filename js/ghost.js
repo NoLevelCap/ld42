@@ -16,6 +16,15 @@ function ghost(x, y, floor) {
     _this.Sprite = _this.spriteList[0];
     _this.addChild(_this.Sprite);
 
+    _this.glowSprite = new Sprite(Tex_Main["ghostGlow1.png"]);
+    _this.glowSprite.pivot.set(0.5)
+    _this.glowSprite.anchor.set(0.5, 0.5);
+    _this.glowSprite.scale.set(0.0);
+    _this.glowSprite.visible = true;
+    _this.glowRadius = 400;
+    GAMEMANAGER.uiContainer.addChild(_this.glowSprite);
+    _this.glowRadius = 0;
+
     _this.mapx = x;
     _this.mapy = y;
     _this.currentFloor = floor;
@@ -84,9 +93,21 @@ function ghost(x, y, floor) {
   }
 
   this.animatable = function(){
-
     var screenX = _this.x + GAMEMANAGER.Map.position.x;
     var screenY = _this.y + GAMEMANAGER.Map.position.y;
+
+    if (!paused) {
+      if (_this.glowRadius < 400) {
+        _this.glowRadius += 5;
+        _this.glowSprite.scale.set(_this.glowSprite.scale.x + 0.07);
+        _this.glowSprite.alpha -= 0.025
+        _this.glowSprite.position.set(screenX, screenY)
+      } else {
+        _this.glowSprite.visible = false;
+      }
+    }
+
+
 
     var rot = Math.atan2(GAMEMANAGER.player.y - screenY, GAMEMANAGER.player.x - screenX);
 
@@ -120,7 +141,11 @@ function ghost(x, y, floor) {
     }
 
     if (GAMEMANAGER.overlay.active.type == "torch") {
-      _this.visible = false;
+      if (_this.glowRadius < 400) {
+        _this.visible = true;
+      } else {
+        _this.visible = false;
+      }
     } else {
       _this.visible = true;
     }
