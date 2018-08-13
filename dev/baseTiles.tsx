@@ -46,6 +46,11 @@
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="29">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="44">
   <properties>
    <property name="solid" type="bool" value="true"/>
@@ -148,9 +153,24 @@
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="88">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="89">
   <properties>
    <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="100">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="102">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
   </properties>
  </tile>
  <tile id="103">
@@ -261,6 +281,7 @@
  </tile>
  <tile id="148">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
@@ -301,11 +322,13 @@
  </tile>
  <tile id="166">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
  <tile id="167">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
@@ -323,11 +346,13 @@
  </tile>
  <tile id="182">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
  <tile id="184">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
@@ -339,6 +364,7 @@
  </tile>
  <tile id="186">
   <properties>
+   <property name="shake" type="bool" value="true"/>
    <property name="type" value="grave"/>
   </properties>
  </tile>

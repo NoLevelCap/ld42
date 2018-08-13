@@ -62,7 +62,11 @@ function ghost(x, y, floor) {
     var dist = Math.sqrt(Math.pow(_this.mapx - GAMEMANAGER.player.mapx, 2) + Math.pow(_this.mapy - GAMEMANAGER.player.mapy, 2));
     if (dist == 0) {
       GAMEMANAGER.cameraTimer -= 5;
+      if (GAMEMANAGER.cameraTimer <= 0) {
+        GAMEMANAGER.setGameOver(true);
+      }
     }
+
   }
 
   this.remove = function(){

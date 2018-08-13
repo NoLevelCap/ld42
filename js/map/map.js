@@ -12,6 +12,9 @@ function map() {
   this.xshift = 0;
   this.yshift = 0;
 
+  _this.objectShakeSprite = new Sprite();
+  _this.objectShakeTimer = 0;
+
   this.init = function(){
     for (var i = 0; i < MapData.layers.length; i++) {
       layer = MapData.layers[i];
@@ -91,7 +94,17 @@ function map() {
     _this.yshift = renderer.height/2 - MapData.tileheight/2;
     _this.position.set(_this.xshift, _this.yshift);
 
+    GAMEMANAGER.animatables.push(_this);
 
+  }
+
+  this.animatable = function() {
+    if (_this.objectShakeTimer > 0) {
+      _this.objectShakeTimer -= 1;
+      _this.objectShakeSprite.anchor.set((Math.random() - 0.5) * 0.15, 0.0);
+    } else {
+      _this.objectShakeSprite.anchor.set(0.0, 0.0);
+    }
   }
 
   this.changeFloor = function(floor) {
@@ -161,6 +174,18 @@ function map() {
           GAMEMANAGER.interactable = true;
         }
       }
+
+      for (var x = 0; x < _this.ghosts.length; x++) {
+        if (obj.tileData.shake) {
+//          console.log(_this.ghosts[x].mapx + ", " + _this.ghosts[x].mapy + " : " + (obj.x));
+          var dist = Math.sqrt(Math.pow(_this.ghosts[x].mapx - (obj.x / tile.width), 2) + Math.pow(_this.ghosts[x].mapy - (obj.y / tile.height), 2));
+          if (dist < 3.0 && Math.random() <= 0.01 && _this.objectShakeTimer <= 0) {
+            _this.objectShakeSprite = obj.Sprite;
+            _this.objectShakeTimer = 30;
+          }
+        }
+      }
+
     }
   }
 

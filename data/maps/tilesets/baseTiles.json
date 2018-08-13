@@ -1,5 +1,5 @@
 { "columns":20,
- "image":"..\/..\/..\/img\/maps\/test1.png",
+ "image":"..\/..\/..\/img\/maps\/baseTiles.png",
  "imageheight":640,
  "imagewidth":640,
  "margin":0,
@@ -9,6 +9,14 @@
  "tileheight":32,
  "tileproperties":
     {
+     "100":
+        {
+         "shake":true
+        },
+     "102":
+        {
+         "shake":true
+        },
      "103":
         {
          "solid":true
@@ -97,6 +105,7 @@
         },
      "148":
         {
+         "shake":true,
          "solid":true
         },
      "160":
@@ -130,10 +139,12 @@
         },
      "166":
         {
+         "shake":true,
          "solid":true
         },
      "167":
         {
+         "shake":true,
          "solid":true
         },
      "180":
@@ -148,10 +159,12 @@
         },
      "182":
         {
+         "shake":true,
          "solid":true
         },
      "184":
         {
+         "shake":true,
          "solid":true
         },
      "185":
@@ -161,6 +174,7 @@
         },
      "186":
         {
+         "shake":true,
          "type":"grave"
         },
      "25":
@@ -178,6 +192,10 @@
      "28":
         {
          "solid":true
+        },
+     "29":
+        {
+         "shake":true
         },
      "44":
         {
@@ -277,6 +295,10 @@
         {
          "solid":true
         },
+     "88":
+        {
+         "shake":true
+        },
      "89":
         {
          "solid":true
@@ -288,6 +310,14 @@
     },
  "tilepropertytypes":
     {
+     "100":
+        {
+         "shake":"bool"
+        },
+     "102":
+        {
+         "shake":"bool"
+        },
      "103":
         {
          "solid":"bool"
@@ -376,6 +406,7 @@
         },
      "148":
         {
+         "shake":"bool",
          "solid":"bool"
         },
      "160":
@@ -409,10 +440,12 @@
         },
      "166":
         {
+         "shake":"bool",
          "solid":"bool"
         },
      "167":
         {
+         "shake":"bool",
          "solid":"bool"
         },
      "180":
@@ -427,10 +460,12 @@
         },
      "182":
         {
+         "shake":"bool",
          "solid":"bool"
         },
      "184":
         {
+         "shake":"bool",
          "solid":"bool"
         },
      "185":
@@ -440,6 +475,7 @@
         },
      "186":
         {
+         "shake":"bool",
          "type":"string"
         },
      "25":
@@ -457,6 +493,10 @@
      "28":
         {
          "solid":"bool"
+        },
+     "29":
+        {
+         "shake":"bool"
         },
      "44":
         {
@@ -555,6 +595,10 @@
      "87":
         {
          "solid":"bool"
+        },
+     "88":
+        {
+         "shake":"bool"
         },
      "89":
         {
