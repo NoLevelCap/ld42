@@ -280,7 +280,7 @@
          "name":"Basement",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -782,6 +782,18 @@
                          "height":32,
                          "id":78,
                          "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "function":"GAMEMANAGER.textmanager.queueText(\"DING DONG!\");\nobj.objData.active = false;",
+                             "interactive":true
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "function":"string",
+                             "interactive":"bool"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -1080,6 +1092,29 @@
                          "width":32,
                          "x":2272,
                          "y":1504
+                        }, 
+                        {
+                         "height":32,
+                         "id":194,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "function":"GAMEMANAGER.textmanager.queueText(\"HELLO\");",
+                             "type":"interactive"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "function":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1792,
+                         "y":1472
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1211,7 +1246,7 @@
          "name":"Ground Floor",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1718,7 +1753,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":194,
+ "nextobjectid":197,
  "orientation":"orthogonal",
  "properties":
     {

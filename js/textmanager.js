@@ -12,6 +12,7 @@ function textmanager() {
     _this.rect = new PIXI.Graphics();
     _this.rect.beginFill(0x222222);
     _this.rect.drawRect(0, 0, 960, 100);
+    _this.rushText = false;
   }
 
   this.onKeyDown = function(key){
@@ -21,6 +22,9 @@ function textmanager() {
   }
 
   this.onMouseClick = function() {
+    if (_this.visible && _this.cursorPos < _this.displayText.length && !_this.rushText) {
+      _this.rushText = true;
+    }
     if (_this.visible && _this.cursorPos >= _this.displayText.length) {
       _this.hideText();
     }
@@ -29,11 +33,13 @@ function textmanager() {
   this.queueText = function(text) {
     _this.displayText = text;
     _this.cursorPos = 0;
+    _this.showText();
   }
 
   this.showText = function() {
     paused = true;
     _this.visible = true;
+    _this.rushText = false;
   }
 
   this.hideText = function() {
@@ -43,7 +49,11 @@ function textmanager() {
 
   this.animatable = function() {
     if (_this.cursorPos < _this.displayText.length) {
-      _this.cursorPos += 1;
+      if (_this.rushText) {
+        _this.cursorPos += 4;
+      } else {
+        _this.cursorPos += 1;
+      }
     }
     var text = _this.displayText.slice(0, _this.cursorPos);
     var fontSize = 24;
