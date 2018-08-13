@@ -35,6 +35,11 @@ function player() {
     document.addEventListener('keyup', _this.onKeyUp);
   }
 
+  this.removeEventListeners = function() {
+    document.removeEventListener("keydown", _this.onKeyDown);
+    document.removeEventListener("keyup", _this.onKeyUp);
+  }
+
   this.onKeyDown = function(key){
 
     if (key.keyCode === 81 || key.keyCode === 32) {
@@ -70,7 +75,6 @@ function player() {
     if (key.keyCode === 82) {
       if (gameover) {
         GAMEMANAGER.setGameOver(false);
-
         // PUT MAP RELOAD CODE HERE!
         GAMEMANAGER.endmaingame();
         state = GAMEMANAGER.maingameinit;

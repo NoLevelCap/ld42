@@ -16,6 +16,9 @@ function textmanager() {
   }
 
   this.onKeyDown = function(key){
+    if (_this.visible && _this.cursorPos < _this.displayText.length && !_this.rushText) {
+      _this.rushText = true;
+    }
     if (_this.visible && _this.cursorPos >= _this.displayText.length) {
       _this.hideText();
     }
@@ -28,6 +31,11 @@ function textmanager() {
     if (_this.visible && _this.cursorPos >= _this.displayText.length) {
       _this.hideText();
     }
+  }
+
+  this.removeEventListeners = function() {
+    document.removeEventListener("keydown", _this.onKeyDown);
+    document.removeEventListener("click", _this.onMouseClick);
   }
 
   this.queueText = function(text) {
