@@ -117,7 +117,7 @@
     "id": "T0012",
     "name": "mineIntro",
     "filepath": "",
-    "text": "Welcome back to \"Haunts TV\"! We've received a tip off about a haunted mine so we're going in to investigate. Rumour has it a miner haunts the caves here and he won't rest until the last gold ore has been mined!"
+    "text": "Welcome back to \"Haunts TV\"! We've received a tip off about haunted mine so we're going in to investigate. Rumour has it a miner haunts the caves here and he won't rest until the last gold ore has been mined!"
   },
   "T0013": {
     "id": "T0013",
@@ -136,11 +136,5 @@
     "name": "picaxe",
     "filepath": "",
     "text": "This must be the ghost miners pickaxe!"
-  },
-  "E0002": {
-    "id": "E0002",
-    "name": "ore2",
-    "filepath": "",
-    "text": "Still need that pickaxe..."
   }
 }
