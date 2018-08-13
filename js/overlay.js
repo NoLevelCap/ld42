@@ -8,8 +8,11 @@ function overlay() {
     _this.text.x = 600;
     _this.text.y = 50;
 
-    _this.active = new _this.camera();
-    _this.inactive = new _this.torch();
+    _this.cameraobj = new _this.camera();
+    _this.torchobj = new _this.torch();
+
+    _this.active = _this.cameraobj;
+    _this.inactive = _this.torchobj;
 
     GAMEMANAGER.animatables.push(_this);
 
@@ -27,6 +30,8 @@ function overlay() {
       _inThis.mask.beginFill(0xFF);
       _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       _inThis.mask.endFill();
+
+
 
     }
 
@@ -68,6 +73,8 @@ function overlay() {
       _inThis.overlay.addChild(_inThis.mask);
       _inThis.overlay.addChild(_inThis.sprite);
 
+      _inThis.debugGraphics = new Graphics();
+      _this.addChild(_inThis.debugGraphics);
 
     }
 

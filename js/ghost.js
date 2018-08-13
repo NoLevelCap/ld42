@@ -2,6 +2,7 @@ function ghost(x, y, floor) {
   var _this = this;
 
   _this.spriteList = new Array();
+  _this.running = false;
 
   this.init = function(){
     _this.spriteList.push(new Sprite(Tex_Main["ghost1_nw_down.png"]));
@@ -62,6 +63,9 @@ function ghost(x, y, floor) {
     var dist = Math.sqrt(Math.pow(_this.mapx - GAMEMANAGER.player.mapx, 2) + Math.pow(_this.mapy - GAMEMANAGER.player.mapy, 2));
     if (dist == 0) {
       GAMEMANAGER.cameraTimer -= 5;
+
+      //Warps to a random area on the map
+      _this.moveFloor(GAMEMANAGER.Map.currentFloor);
     }
   }
 
@@ -76,8 +80,8 @@ function ghost(x, y, floor) {
 
   this.animatable = function(){
 
-    var screenX = _this.x + _this.width/2 + GAMEMANAGER.Map.position.x;
-    var screenY = _this.y + _this.height/2 + GAMEMANAGER.Map.position.y;
+    var screenX = _this.x + GAMEMANAGER.Map.position.x;
+    var screenY = _this.y + GAMEMANAGER.Map.position.y;
 
     var rot = Math.atan2(GAMEMANAGER.player.y - screenY, GAMEMANAGER.player.x - screenX);
 
@@ -116,12 +120,78 @@ function ghost(x, y, floor) {
       _this.visible = true;
     }
 
+
+    //check
+    if(_this.isInCameraFustrum()){
+        _this.running = true;
+    } else {
+      _this.running = false;
+    }
+
+
+
+
+
     //console.log(Date.now() - _this.time);
     if(Date.now() - _this.time > 1000){
       _this.time = Date.now();
       _this.aiRun();
     }
 
+  }
+
+  this.isInCameraFustrum = function(){
+    var visual = GAMEMANAGER.overlay.active.mask;
+
+    if(GAMEMANAGER.overlay.active === GAMEMANAGER.overlay.cameraobj){
+      var screenX = _this.x + GAMEMANAGER.Map.position.x;
+      var screenY = _this.y + GAMEMANAGER.Map.position.y;
+
+      var p = visual.position.x;
+      var q = visual.position.y;
+      var theta = visual.rotation;
+
+      var x1 = visual.position.x - visual.width/2;
+      var y1 = visual.position.y - visual.height;
+
+      var x2 = visual.position.x + visual.width/2;
+      var y2 = visual.position.y - visual.height;
+
+      var nx1 = (x1 - p) * Math.cos(theta) - (y1 - q) * Math.sin(theta) + p;
+      var ny1 = (x1 - p) * Math.sin(theta) + (y1 - q) * Math.cos(theta) + q;
+
+      var nx2 = (x2 - p) * Math.cos(theta) - (y2 - q) * Math.sin(theta) + p;
+      var ny2 = (x2 - p) * Math.sin(theta) + (y2 - q) * Math.cos(theta) + q;
+
+      var inCamera = PointInTriangle(screenX, screenY, p, q, nx1, ny1, nx2, ny2);
+
+      /*var dbg = GAMEMANAGER.overlay.cameraobj.debugGraphics;
+
+      dbg.clear();
+      dbg.beginFill(0xFFFFFF);
+      dbg.drawCircle(nx1, ny1, 10);
+      dbg.drawCircle(nx2, ny2, 10);
+      dbg.drawCircle(screenX, screenY, 10);
+      dbg.drawCircle(p, q, 10);
+      dbg.endFill();
+
+      console.log("In camera: " + PointInTriangle(
+        screenX, screenY,
+        p, q,
+        nx1, ny1,
+        nx2, ny2),
+
+        screenX, screenY,
+        p, q,
+        nx1, ny1,
+        nx2, ny2,
+        theta,
+      )*/
+
+      return inCamera;
+    }
+
+    return false;
   }
 
   this.moveFloor = function(newFloor){
@@ -161,6 +231,9 @@ function ghost(x, y, floor) {
       } else {
         _this.delayTicks++;
       }
+    } else if(_this.running){
+      _this.delayTicks = 0;
+      _this.move(-1);
     } else {
       _this.delayTicks = 0;
       _this.move(1);

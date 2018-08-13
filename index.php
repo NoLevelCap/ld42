@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.min.js"></script><!--Howler Sound Engine-->
 
   <script src="js/alias.js"></script>
+  <script src="js/inits.js"></script>
 
   <script src="js/ghost.js"></script>
   <script src="js/overlay.js"></script>
@@ -24,6 +25,8 @@
 
   <script src="js/utils/shape.js"></script>
   <script src="js/utils/rectangle.js"></script>
+
+  <script src="js/levelselect/levels.js"></script>
   <!--<script src="js/loader.js"></script>-->
 
 

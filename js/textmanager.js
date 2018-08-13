@@ -59,7 +59,15 @@ function textmanager() {
     var fontSize = 24;
     var lineLength = fontSize * 40;
     _this.text = new PIXI.Text(text, {fontFamily: "Courier", fontSize: fontSize, fill: 0xFFFFFF, align: "left", wordWrap: true, wordWrapWidth: lineLength});
+
     _this.removeChildren();
+
+    /*
+    CODE DOESN'T WORK
+    for (var i = 0; i < _this.children.length; i++) {
+      _this.children[i].destroy({children: true});
+    }*/
+
     _this.addChild(_this.rect);
     _this.addChild(_this.text);
   }

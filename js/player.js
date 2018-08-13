@@ -72,7 +72,8 @@ function player() {
         GAMEMANAGER.setGameOver(false);
 
         // PUT MAP RELOAD CODE HERE!
-
+        GAMEMANAGER.endmaingame();
+        state = GAMEMANAGER.maingameinit;
       }
     }
 
