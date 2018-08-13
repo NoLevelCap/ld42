@@ -277,12 +277,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -298,12 +298,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1240,12 +1240,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1261,12 +1261,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1282,12 +1282,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1305,16 +1305,16 @@
                             {
                              "active":true,
                              "interactable":true,
-                             "queueText":"HELLO",
                              "singular":false,
+                             "text":"HELLO",
                              "type":"queueText"
                             },
                          "propertytypes":
                             {
                              "active":"bool",
                              "interactable":"bool",
-                             "queueText":"string",
                              "singular":"bool",
+                             "text":"string",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1726,12 +1726,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostSpawn"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1747,13 +1747,17 @@
                          "name":"",
                          "properties":
                             {
+                             "active":true,
                              "interactable":true,
+                             "singular":true,
                              "spawnid":182,
                              "type":"ghostTrigger"
                             },
                          "propertytypes":
                             {
+                             "active":"bool",
                              "interactable":"bool",
+                             "singular":"bool",
                              "spawnid":"int",
                              "type":"string"
                             },
@@ -1791,12 +1795,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostSpawn"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1835,12 +1839,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1856,12 +1860,12 @@
                          "name":"",
                          "properties":
                             {
-                             "inactive":true,
+                             "active":false,
                              "type":"ghostTransferPoint"
                             },
                          "propertytypes":
                             {
-                             "inactive":"bool",
+                             "active":"bool",
                              "type":"string"
                             },
                          "rotation":0,
@@ -1880,7 +1884,7 @@
          "name":"First Floor",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],

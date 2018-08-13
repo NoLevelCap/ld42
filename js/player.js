@@ -84,6 +84,7 @@ function player() {
     if (key.keyCode === 69) {
       GAMEMANAGER.Map.pickUp(_this.mapx, _this.mapy);
       GAMEMANAGER.Map.openDoors(_this.mapx, _this.mapy, _this.facing);
+      _this.selectInteractable();
     }
   }
 
