@@ -115,10 +115,21 @@ function map() {
       if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.item) {
           GAMEMANAGER.player.addItem(obj.tileData.name);
+          var sprite = new Sprite();
+          sprite.texture = obj.Sprite.texture;
+          sprite.width *= 2;
+          sprite.height *= 2;
+          sprite.x = (sprite.width * GAMEMANAGER.player.inventory.length) - 32;
+          sprite.y = 636;
+          GAMEMANAGER.uiContainer.addChild(sprite);
           console.log(GAMEMANAGER.player.inventory);
           GAMEMANAGER.animatables.splice(GAMEMANAGER.animatables.indexOf(obj), 1);
           _this.objdata[_this.currentFloor][i].remove();
           _this.objdata[_this.currentFloor].splice(i, 1);
+        }
+        if (obj.objData.interactive && obj.objData.active) {
+          console.log(obj.objData.function);
+          eval(obj.objData.function);
         }
         if(obj.tileData.solid){
           objCollision = true;
@@ -144,6 +155,9 @@ function map() {
 
       if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.item) {
+          GAMEMANAGER.interactable = true;
+        }
+        if (obj.objData.interactive && obj.objData.active) {
           GAMEMANAGER.interactable = true;
         }
       }

@@ -13,6 +13,7 @@ var Container = PIXI.Container,
     Console = console,
     DEG2RAD = 0.01745329251;
     paused = false;
+    gameover = false;
 
 /*WebFontConfig = {
   custom: {
