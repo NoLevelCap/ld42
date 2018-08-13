@@ -268,8 +268,8 @@
                          "type":"",
                          "visible":true,
                          "width":32,
-                         "x":1280,
-                         "y":1600
+                         "x":1760,
+                         "y":1536
                         }, 
                         {
                          "height":32,
@@ -324,7 +324,7 @@
          "name":"Basement",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -358,6 +358,14 @@
                          "height":32,
                          "id":36,
                          "name":"",
+                         "properties":
+                            {
+                             "torch":10
+                            },
+                         "propertytypes":
+                            {
+                             "torch":"int"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -1329,7 +1337,7 @@
          "name":"Ground Floor",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
