@@ -106,5 +106,35 @@
     "name": "story",
     "filepath": "",
     "text": "Legend says that this lodge was built on a old burial ground. Only the skull of the chieftan can restore sanctity to this tomb"
+  },
+  "E0001": {
+    "id": "E0001",
+    "name": "endGame",
+    "filepath": "",
+    "text": "It's a dug up grave... Looks like it's missing something"
+  },
+  "T0012": {
+    "id": "T0012",
+    "name": "mineIntro",
+    "filepath": "",
+    "text": "Welcome back to \"Haunts TV\"! We've received a tip off about haunted mine so we're going in to investigate. Rumour has it a miner haunts the caves here and he won't rest until the last gold ore has been mined!"
+  },
+  "T0013": {
+    "id": "T0013",
+    "name": "mineCart",
+    "filepath": "",
+    "text": "Tracks? I wonder if they lead anywhere..."
+  },
+  "T0014": {
+    "id": "T0014",
+    "name": "oreIntro",
+    "filepath": "",
+    "text": "Hey look, some gold ore, I just need to find a picaxe to mine it"
+  },
+  "T0015": {
+    "id": "T0015",
+    "name": "picaxe",
+    "filepath": "",
+    "text": "This must be the ghost miners picaxe!"
   }
 }
