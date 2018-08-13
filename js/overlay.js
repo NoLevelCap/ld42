@@ -27,9 +27,7 @@ function overlay() {
       _this.addChild(_inThis.overlay);
 
       _inThis.mask = new Graphics();
-      _inThis.mask.beginFill(0xFF);
-      _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
-      _inThis.mask.endFill();
+
 
 
 
@@ -47,6 +45,41 @@ function overlay() {
 
     this.process = function() {
       GAMEMANAGER.memoryText.text = GAMEMANAGER.cameraTimer + " MBs remaining";
+
+      var objectsOnFloor = GAMEMANAGER.Map.objdata[GAMEMANAGER.Map.currentFloor];
+
+      _inThis.mask.clear();
+      _inThis.mask.beginFill(0xFF);
+      _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
+      for (var i = 0; i < objectsOnFloor.length; i++) {
+        var obj = objectsOnFloor[i];
+
+        var screenX = obj.x + obj.width/2 + GAMEMANAGER.Map.position.x;
+        var screenY = obj.y + obj.height/2 + GAMEMANAGER.Map.position.y;
+
+        var torch = obj.objData.torch;
+        if(torch === undefined){
+          torch = obj.tileData.torch;
+        }
+
+
+
+        if(!(torch === undefined)){
+          var diff = 2;
+          var ran = 0;
+
+          if(obj.objData.tran === undefined){
+            ran = obj.objData.tran = Math.random()*10000;
+          } else {
+            ran = obj.objData.tran;
+          }
+
+          var amount = torch*(10-diff) + Math.abs(torch*diff*Math.sin((Date.now()+ran)/1000));
+          console.log("drawing");
+          _inThis.mask.drawCircle(screenX,screenY, amount);
+        }
+      }
+      _inThis.mask.endFill();
     }
 
     _inThis.type = "torch";

@@ -49,6 +49,7 @@
  <tile id="29">
   <properties>
    <property name="shake" type="bool" value="true"/>
+   <property name="torch" type="int" value="5"/>
   </properties>
  </tile>
  <tile id="44">

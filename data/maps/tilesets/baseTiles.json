@@ -195,7 +195,8 @@
         },
      "29":
         {
-         "shake":true
+         "shake":true,
+         "torch":5
         },
      "44":
         {
@@ -496,7 +497,8 @@
         },
      "29":
         {
-         "shake":"bool"
+         "shake":"bool",
+         "torch":"int"
         },
      "44":
         {
