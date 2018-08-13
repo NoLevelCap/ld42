@@ -67,6 +67,15 @@ function player() {
       _this.moveS = 1;
     }
 
+    if (key.keyCode === 82) {
+      if (gameover) {
+        GAMEMANAGER.setGameOver(false);
+
+        // PUT MAP RELOAD CODE HERE!
+
+      }
+    }
+
     if (key.keyCode === 69) {
       GAMEMANAGER.Map.pickUp(_this.mapx, _this.mapy);
       GAMEMANAGER.Map.openDoors(_this.mapx, _this.mapy, _this.facing);

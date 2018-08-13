@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="199">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="197">
  <properties>
   <property name="spawnX" type="int" value="60"/>
   <property name="spawnY" type="int" value="56"/>
@@ -138,18 +138,6 @@
    <object id="177" gid="167" x="1280" y="1600" width="32" height="32"/>
   </objectgroup>
   <objectgroup name="Trigger Layer">
-   <object id="197" x="2240" y="1536" width="32" height="32">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
-   <object id="198" x="1504" y="1664" width="32" height="32">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
    <object id="193" x="1280" y="1600" width="32" height="32">
     <properties>
      <property name="active" type="bool" value="true"/>
@@ -307,7 +295,14 @@
    <object id="73" gid="88" x="2112" y="1792" width="32" height="32"/>
    <object id="76" gid="88" x="2112" y="1728" width="32" height="32"/>
    <object id="77" gid="101" x="1792" y="1472" width="32" height="32"/>
-   <object id="78" gid="121" x="1792" y="1504" width="32" height="32"/>
+   <object id="78" gid="121" x="1792" y="1504" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="function">GAMEMANAGER.textmanager.queueText(&quot;DING DONG!&quot;);
+obj.objData.active = false;</property>
+     <property name="interactive" type="bool" value="true"/>
+    </properties>
+   </object>
    <object id="91" gid="102" x="1536" y="1632" width="32" height="32"/>
    <object id="93" gid="103" x="1504" y="1568" width="32" height="32"/>
    <object id="95" gid="103" x="1600" y="1632" width="32" height="32"/>
@@ -349,6 +344,13 @@
    <object id="178" gid="167" x="2240" y="1696" width="32" height="32"/>
    <object id="179" gid="168" x="2272" y="1792" width="32" height="32"/>
    <object id="185" gid="89" x="2272" y="1504" width="32" height="32"/>
+   <object id="194" x="1792" y="1472" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="function" value="GAMEMANAGER.textmanager.queueText(&quot;HELLO&quot;);"/>
+     <property name="type" value="interactive"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup name="Trigger Layer">
    <object id="162" x="1920" y="1568" width="64" height="96">
@@ -382,24 +384,6 @@
      <property name="active" type="bool" value="true"/>
      <property name="text" value="Is that a g... g... ghost!!"/>
      <property name="type" value="queueText"/>
-    </properties>
-   </object>
-   <object id="191" x="1504" y="1472" width="160" height="256">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
-   <object id="192" x="2240" y="1664" width="32" height="32">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
-   <object id="193" x="2272" y="1760" width="32" height="32">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
     </properties>
    </object>
   </objectgroup>
@@ -576,18 +560,6 @@
     <properties>
      <property name="inactive" type="bool" value="true"/>
      <property name="type" value="ghostSpawn"/>
-    </properties>
-   </object>
-   <object id="195" x="1728" y="1472" width="448" height="64">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
-    </properties>
-   </object>
-   <object id="196" x="2464" y="1504" width="32" height="32">
-    <properties>
-     <property name="inactive" type="bool" value="true"/>
-     <property name="type" value="ghostTransferPoint"/>
     </properties>
    </object>
    <object id="192" x="1728" y="1216" width="32" height="32">
