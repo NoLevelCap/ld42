@@ -44,6 +44,7 @@ function player() {
 
     if (key.keyCode === 81 || key.keyCode === 32) {
       if (!paused && GAMEMANAGER.cameraTimer > 0) {
+        SOUNDMANAGER.getSound("click").play();
         GAMEMANAGER.overlay.switch();
       }
     }

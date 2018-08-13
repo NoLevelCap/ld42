@@ -138,6 +138,9 @@ function gamemanager() {
     SOUNDMANAGER.addSound("example", ["G0001"]);
     SOUNDMANAGER.addSound("pickup", ["G0002"]);
     SOUNDMANAGER.addSound("openDoor", ["G0003"]);
+    SOUNDMANAGER.addSound("ghostAppear", ["G0004"]);
+    SOUNDMANAGER.addSound("spark", ["G0005"]);
+    SOUNDMANAGER.addSound("click", ["G0006"]);
   }
 
   this.levelselect = function(){
