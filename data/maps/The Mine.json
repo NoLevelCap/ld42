@@ -99,6 +99,14 @@
                          "height":32,
                          "id":56,
                          "name":"",
+                         "properties":
+                            {
+                             "name":"endGameItem"
+                            },
+                         "propertytypes":
+                            {
+                             "name":"string"
+                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -848,27 +856,6 @@
                         }, 
                         {
                          "height":32,
-                         "id":123,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "type":"endLevel"
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "type":"string"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1952,
-                         "y":1248
-                        }, 
-                        {
-                         "height":32,
                          "id":138,
                          "name":"",
                          "properties":
@@ -1038,6 +1025,31 @@
                          "width":32,
                          "x":1632,
                          "y":960
+                        }, 
+                        {
+                         "height":32,
+                         "id":158,
+                         "name":"",
+                         "properties":
+                            {
+                             "active":true,
+                             "interactable":true,
+                             "text":"E0002",
+                             "type":"endGame"
+                            },
+                         "propertytypes":
+                            {
+                             "active":"bool",
+                             "interactable":"bool",
+                             "text":"string",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1952,
+                         "y":1248
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1971,7 +1983,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":158,
+ "nextobjectid":159,
  "orientation":"orthogonal",
  "properties":
     {

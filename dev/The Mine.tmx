@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="158">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="159">
  <properties>
   <property name="spawnX" type="int" value="51"/>
   <property name="spawnY" type="int" value="48"/>
@@ -124,7 +124,11 @@
      <property name="toFloor" value="Ground Floor"/>
     </properties>
    </object>
-   <object id="56" gid="207" x="1696" y="960" width="32" height="32"/>
+   <object id="56" gid="207" x="1696" y="960" width="32" height="32">
+    <properties>
+     <property name="name" value="endGameItem"/>
+    </properties>
+   </object>
    <object id="57" gid="12" x="736" y="1280" width="32" height="32"/>
    <object id="58" gid="12" x="800" y="1280" width="32" height="32"/>
    <object id="65" gid="33" x="1696" y="1568" width="32" height="32"/>
@@ -198,12 +202,6 @@
      <property name="type" value="queueText"/>
     </properties>
    </object>
-   <object id="123" x="1952" y="1248" width="32" height="32">
-    <properties>
-     <property name="active" type="bool" value="true"/>
-     <property name="type" value="endLevel"/>
-    </properties>
-   </object>
    <object id="138" x="1536" y="832" width="32" height="32">
     <properties>
      <property name="inactive" type="bool" value="true"/>
@@ -252,6 +250,14 @@
     <properties>
      <property name="active" type="bool" value="false"/>
      <property name="type" value="ghostTransferPoint"/>
+    </properties>
+   </object>
+   <object id="158" x="1952" y="1248" width="32" height="32">
+    <properties>
+     <property name="active" type="bool" value="true"/>
+     <property name="interactable" type="bool" value="true"/>
+     <property name="text" value="E0002"/>
+     <property name="type" value="endGame"/>
     </properties>
    </object>
   </objectgroup>
