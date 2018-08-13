@@ -122,6 +122,8 @@ function player() {
           var worldY = _this.position.y - GAMEMANAGER.Map.position.y;
           var rect = trigger.bounds;
 
+//          console.log("POS: " + trigger.bounds.x + ", " + trigger.bounds.y + " = " + worldX + ", " + worldY);
+
           if(rect.contains(worldX, worldY)){
             GAMEMANAGER.interactable = true;
           }

@@ -23,14 +23,22 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
 	"sourceSize": {"w":240,"h":240}
+},
+"The Mine.png":
+{
+	"frame": {"x":720,"y":0,"w":240,"h":240},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
+	"sourceSize": {"w":240,"h":240}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "mapicons.png",
 	"format": "RGBA8888",
-	"size": {"w":720,"h":240},
+	"size": {"w":960,"h":240},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:706b97c94030a6b9243526a9dbc6290a:61ee011dada7f9e0df90220ddc28c352:6fb9b835c6146c644ab0a50ec083f78f$"
+	"smartupdate": "$TexturePacker:SmartUpdate:4882d0428460980f4fa52a9e44311fd3:299f8159e516d47ca344c77fc2edb356:6fb9b835c6146c644ab0a50ec083f78f$"
 }
 }
