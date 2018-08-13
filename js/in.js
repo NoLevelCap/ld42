@@ -9,10 +9,11 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 loader
   .add("img/packed.json")
+  .add("img/mapicons.json")
   .load(setup);
 
 //Define any variables that are used in more than one function
-var Tex_Main, state = failed, TRIGGERS;
+var Tex_Main, Map_Icons, state = failed, TRIGGERS;
 var SOUNDMANAGER, GAMEMANAGER;
 function setup() {
 
@@ -20,9 +21,11 @@ function setup() {
   //SOUNDMANAGER = new SoundManager();
 
   Tex_Main = PIXI.loader.resources["img/packed.json"].textures;
+  Map_Icons = PIXI.loader.resources["img/mapicons.json"].textures;
 
   GAMEMANAGER = new gamemanager();
-  state = GAMEMANAGER.maingameinit;
+  //state = GAMEMANAGER.maingameinit;
+  state = GAMEMANAGER.levelselectinit;
 
   TRIGGERS = new triggerCode();
 

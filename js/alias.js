@@ -63,3 +63,19 @@ function inside(point, vs) {
 
     return inside;
 };
+
+function sign (x1, y1, x2, y2, x3, y3)
+{
+    return (x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3);
+}
+
+function PointInTriangle (px, py, x1, y1, x2, y2, x3, y3)
+{
+    var b1, b2, b3;
+
+    b1 = sign(px, py, x1, y1, x2, y2) < 0.0;
+    b2 = sign(px, py, x2, y2, x3, y3) < 0.0;
+    b3 = sign(px, py, x3, y3, x1, y1) < 0.0;
+
+    return ((b1 == b2) && (b2 == b3));
+}

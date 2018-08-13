@@ -270,7 +270,51 @@
                          "width":32,
                          "x":1280,
                          "y":1600
+                        }, 
+                        {
+                         "height":32,
+                         "id":202,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2720,
+                         "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":203,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":1984,
+                         "y":1600
                         }],
+                 "offsetx":-480,
+                 "offsety":64,
                  "opacity":1,
                  "type":"objectgroup",
                  "visible":true,
@@ -280,7 +324,7 @@
          "name":"Basement",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -778,30 +822,6 @@
                          "y":1472
                         }, 
                         {
-                         "gid":121,
-                         "height":32,
-                         "id":78,
-                         "name":"",
-                         "properties":
-                            {
-                             "active":true,
-                             "function":"GAMEMANAGER.textmanager.queueText(\"DING DONG!\");\nobj.objData.active = false;",
-                             "interactive":true
-                            },
-                         "propertytypes":
-                            {
-                             "active":"bool",
-                             "function":"string",
-                             "interactive":"bool"
-                            },
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":32,
-                         "x":1792,
-                         "y":1504
-                        }, 
-                        {
                          "gid":102,
                          "height":32,
                          "id":91,
@@ -1236,6 +1256,69 @@
                          "width":64,
                          "x":1920,
                          "y":1632
+                        }, 
+                        {
+                         "height":256,
+                         "id":197,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":160,
+                         "x":1504,
+                         "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":198,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2240,
+                         "y":1664
+                        }, 
+                        {
+                         "height":32,
+                         "id":199,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2272,
+                         "y":1760
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1246,7 +1329,7 @@
          "name":"Ground Floor",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -1739,6 +1822,48 @@
                          "width":32,
                          "x":1728,
                          "y":1216
+                        }, 
+                        {
+                         "height":64,
+                         "id":200,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":448,
+                         "x":1728,
+                         "y":1472
+                        }, 
+                        {
+                         "height":32,
+                         "id":201,
+                         "name":"",
+                         "properties":
+                            {
+                             "inactive":true,
+                             "type":"ghostTransferPoint"
+                            },
+                         "propertytypes":
+                            {
+                             "inactive":"bool",
+                             "type":"string"
+                            },
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":32,
+                         "x":2464,
+                         "y":1504
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -1753,7 +1878,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":197,
+ "nextobjectid":204,
  "orientation":"orthogonal",
  "properties":
     {

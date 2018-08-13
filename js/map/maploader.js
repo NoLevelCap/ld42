@@ -1,20 +1,30 @@
-var MapData, MapTilemapData, TilemapBaseImg, MapImg;
+var MapData, MapTilemapData, TilemapBaseImg, MapImg, CurrentMapName, PreLoaded;
 
 function onMapLoad(loader, resources){
-  MapData = resources["Map"].data;
+  MapData = JSON.parse(JSON.stringify(resources[CurrentMapName].data));
+
+  if(PreLoaded){
+    MapTilemapData = JSON.parse(JSON.stringify(resources[CurrentMapName+"MapTilemapData"].data));
+
+    GAMEMANAGER.Map = new map();
+    GAMEMANAGER.gameContainer.addChild(GAMEMANAGER.Map);
+
+    state = GAMEMANAGER.onMapLoad;
+    return;
+  }
 
   var url = window.location.href + MapData.tilesets[0].source;
   var filename = url.substring(url.lastIndexOf('/')+1, url.lastIndexOf('.'));
 
   loader
-    .add("MapTilemapData", "data/maps/tilesets/"+filename+".json")
-    .add("TilemapImg", "img/maps/"+filename+".png")
+    .add(CurrentMapName+"MapTilemapData", "data/maps/tilesets/"+filename+".json")
+    .add(CurrentMapName+"TilemapImg", "img/maps/"+filename+".png")
     .load(onTileSetLoad);
 }
 
 function onTileSetLoad(loader, resources){
-  MapTilemapData = resources["MapTilemapData"].data;
-  TilemapBaseImg = PIXI.BaseTexture.fromImage(resources["TilemapImg"].url);
+  MapTilemapData = JSON.parse(JSON.stringify(resources[CurrentMapName+"MapTilemapData"].data));
+  TilemapBaseImg = PIXI.BaseTexture.fromImage(resources[CurrentMapName+"TilemapImg"].url);
 
   MapImg = new Array();
 
@@ -37,7 +47,19 @@ function onTileSetLoad(loader, resources){
 }
 
 function loadMap(mapname){
-  loader
-  .add("Map", "data/maps/"+mapname+".json")
-  .load(onMapLoad);
+  CurrentMapName = mapname;
+
+  MapData = new Array();
+  MapTilemapData = new Array();
+
+  if(PIXI.loader.resources[mapname] === undefined){
+    loader
+    .add(mapname, "data/maps/"+mapname+".json")
+    .load(onMapLoad);
+  } else {
+    PreLoaded = true;
+    onMapLoad(PIXI.loader, PIXI.loader.resources);
+  }
+
+
 }

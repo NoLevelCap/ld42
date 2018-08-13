@@ -1,7 +1,7 @@
 function gamemanager() {
   var _this = this;
 
-
+  this.filename = 'test2';
 
   this.init = function(){
     _this.animatables = new Array();
@@ -15,7 +15,8 @@ function gamemanager() {
     _this.uiContainer = new Container();
     stage.addChild(_this.uiContainer);
 
-    loadMap("test3");
+    console.log("Trying to load: " + _this.filename);
+    loadMap(_this.filename);
   }
 
   this.onMapLoad = function(){
@@ -34,8 +35,7 @@ function gamemanager() {
 
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
-    var d = new Date();
-    _this.currentTime = d.getSeconds();
+    _this.currentTime = Date.now();
 
     _this.interactable = false;
     _this.interactText = new PIXI.Text("Press E", {fontFamily: "Courier", fontSize: 24, fill: 0xFFFFFF, align: "left"});
@@ -71,11 +71,13 @@ function gamemanager() {
   }
 
   this.maingame = function(){
+
     if (_this.interactable && !paused) {
       _this.interactText.visible = true;
     } else {
       _this.interactText.visible = false;
     }
+
     for (var i = 0; i < _this.animatables.length; i++) {
       _this.animatables[i].animatable();
     }
@@ -98,8 +100,47 @@ function gamemanager() {
   }
 
   this.endmaingame = function(){
+    stage.removeChildren();
+    _this.animatables = [];
+    delete _this.Map;
+    _this.textmanager.destroy({children:true});
+    _this.gameContainer.destroy({children:true});
+    _this.uiContainer.destroy({children:true});
+  }
+
+  this.levelselectinit = function(){
+    state = _this.levelselect;
+
+    _this.levelSelectUI = new Container();
+    stage.addChild(_this.levelSelectUI);
+
+    _this.levelSelectUI.levelSelectTrack = new Container();
+    _this.levelSelectUI.levelSelectTrack.position.set(renderer.width/2 - 240/2, renderer.height/2 - 280/2);
+    _this.levelSelectUI.addChild(_this.levelSelectUI.levelSelectTrack);
+
+    _this.levelSelectUI.levels = new Array();
+    for (var i = 0; i < LEVELS_INMENU.length; i++) {
+      var lWindow = new levelWindow(LEVELS_INMENU[i]);
+      lWindow.position.set(250 * i, 0);
+      _this.levelSelectUI.levelSelectTrack.addChild(lWindow);
+      _this.levelSelectUI.levels.push(lWindow);
+    }
+  }
+
+  this.levelselect = function(){
 
   }
+
+  this.changeLevel = function(filename){
+    _this.levelselectend();
+    _this.filename = filename;
+    state = _this.maingameinit;
+  }
+
+  this.levelselectend = function(){
+    _this.levelSelectUI.destroy({children: true});
+  }
+
 
   Container.call( this );
   this.init();
