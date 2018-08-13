@@ -27,7 +27,7 @@ function overlay() {
       _this.addChild(_inThis.overlay);
 
       _inThis.mask = new Graphics();
-
+      _inThis.overlay.addChild(_inThis.mask);
 
 
 
@@ -49,7 +49,7 @@ function overlay() {
       var objectsOnFloor = GAMEMANAGER.Map.objdata[GAMEMANAGER.Map.currentFloor];
 
       _inThis.mask.clear();
-      _inThis.mask.beginFill(0xFF);
+      _inThis.mask.beginFill(0xFF, 0.1);
       _inThis.mask.drawCircle(GAMEMANAGER.player.position.x,GAMEMANAGER.player.position.y, 150);
       for (var i = 0; i < objectsOnFloor.length; i++) {
         var obj = objectsOnFloor[i];
