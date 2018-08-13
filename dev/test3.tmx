@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="206">
+<map version="1.0" tiledversion="1.1.6" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="208">
  <properties>
   <property name="spawnX" type="int" value="60"/>
   <property name="spawnY" type="int" value="56"/>
  </properties>
  <tileset firstgid="1" source="baseTiles.tsx"/>
- <group name="Basement" visible="0">
+ <group name="Basement">
   <layer name="Tile Layer" width="100" height="100">
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -150,12 +150,13 @@
      <property name="type" value="ghostTransferPoint"/>
     </properties>
    </object>
-   <object id="205" x="1760" y="1536" width="32" height="32">
+   <object id="206" x="1760" y="1536" width="32" height="32">
     <properties>
      <property name="active" type="bool" value="true"/>
      <property name="interactable" type="bool" value="true"/>
      <property name="singular" type="bool" value="false"/>
-     <property name="type" value="endGame"/>
+     <property name="text" value="DING DONG"/>
+     <property name="type" value="queueText"/>
     </properties>
    </object>
   </objectgroup>

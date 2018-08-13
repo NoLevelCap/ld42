@@ -36,14 +36,13 @@ function triggerCode(){
     }
   }
 
-
-/*
-if (GAMEMANAGER.player.checkInventory("skull")) {
- GAMEMANAGER.endLevel();
-} else {
- GAMEMANAGER.textmanager.queueText("It looks like an open grave, maybe I should find something to put in it");
-}
-*/
+  this.endGame = function(trigger) {
+    if (GAMEMANAGER.player.checkInventory("skull")) {
+     GAMEMANAGER.endLevel();
+    } else {
+     GAMEMANAGER.textmanager.queueText("It looks like an open grave, maybe I should find something to put in it");
+    }
+  }
 
 
 }
