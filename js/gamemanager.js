@@ -141,6 +141,7 @@ function gamemanager() {
     SOUNDMANAGER.addSound("ghostAppear", ["G0004"]);
     SOUNDMANAGER.addSound("spark", ["G0005"]);
     SOUNDMANAGER.addSound("click", ["G0006"]);
+    SOUNDMANAGER.addSound("stairs", ["G0007"]);
   }
 
   this.levelselect = function(){

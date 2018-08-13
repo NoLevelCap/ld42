@@ -292,6 +292,7 @@ function map() {
 
       if(obj.Sprite.containsPoint(new PIXI.Point(screenX, screenY))){
         if (obj.tileData.type == "stairs") {
+          SOUNDMANAGER.getSound("stairs").play();
           _this.changeFloor(obj.objData.toFloor);
         }
         if(obj.tileData.solid){
