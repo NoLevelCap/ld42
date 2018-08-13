@@ -14,7 +14,31 @@
   "G0003": {
     "id": "G0003",
     "name": "openDoor",
-    "filepath": "general/openDoor1.mp3",
+    "filepath": "general/doorOpen1.mp3",
+    "text": ""
+  },
+  "T0001": {
+    "id": "T0001",
+    "name": "openingLines",
+    "filepath": "",
+    "text": ""
+  },
+  "G0004": {
+    "id": "G0004",
+    "name": "ghostAppear",
+    "filepath": "general/ghost1.mp3",
+    "text": ""
+  },
+  "G0005": {
+    "id": "G0005",
+    "name": "spark",
+    "filepath": "general/spark3.mp3",
+    "text": ""
+  },
+  "G0006": {
+    "id": "G0006",
+    "name": "click",
+    "filepath": "general/lightClick.mp3",
     "text": ""
   }
 }

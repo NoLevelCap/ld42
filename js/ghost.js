@@ -22,6 +22,7 @@ function ghost(x, y, floor) {
     _this.glowSprite.scale.set(0.0);
     _this.glowSprite.visible = true;
     _this.glowRadius = 400;
+    SOUNDMANAGER.getSound("ghostAppear").play();
     GAMEMANAGER.uiContainer.addChild(_this.glowSprite);
     _this.glowRadius = 0;
 
@@ -71,6 +72,7 @@ function ghost(x, y, floor) {
     _this.setPosition(_this.mapx + dx, _this.mapy + dy);
     var dist = Math.sqrt(Math.pow(_this.mapx - GAMEMANAGER.player.mapx, 2) + Math.pow(_this.mapy - GAMEMANAGER.player.mapy, 2));
     if (dist <= 1 && !paused) {
+      SOUNDMANAGER.getSound("spark").play();
       GAMEMANAGER.electricityTimer = 20;
       GAMEMANAGER.cameraTimer -= 5;
       //Warps to a random area on the map
