@@ -442,16 +442,27 @@ function triggerObject(x, y, width, height, objData, name, id, floor) {
   }
 
   this.trigger = function(){
-    if(_this.triggered)
+    Console.log(_this.id + " Trigger: " + _this.name);
+
+    if(_this.triggered || !_this.objData.active)
       return;
 
     _this.triggered = true;
-    Console.log(_this.id + " Trigger: " + _this.name);
+    Console.log(_this.id + " Trigger Success: " + _this.name);
   }
 
   this.triggerRun = function(){
     console.log("Trying to trigger run " + _this.objData.type);
     TRIGGERS[_this.objData.type](_this);
+
+    if(_this.objData.interactable){
+      if(!_this.objData.singular){
+        _this.triggered = false;
+        _this.objData.active = true;
+      } else {
+        _this.objData.active = false;
+      }
+    }
   }
 
   this.animatable = function(){
