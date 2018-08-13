@@ -106,5 +106,11 @@
     "name": "story",
     "filepath": "",
     "text": "Legend says that this lodge was built on a old burial ground. Only the skull of the chieftan can restore sanctity to this tomb"
+  },
+  "E0001": {
+    "id": "E0001",
+    "name": "endGame",
+    "filepath": "",
+    "text": "It's a dug up grave... Looks like it's missing something"
   }
 }
