@@ -129,12 +129,12 @@
     "id": "T0014",
     "name": "oreIntro",
     "filepath": "",
-    "text": "Hey look, some gold ore, I just need to find a picaxe to mine it"
+    "text": "Hey look, some gold ore, I just need to find a pickaxe to mine it"
   },
   "T0015": {
     "id": "T0015",
     "name": "picaxe",
     "filepath": "",
-    "text": "This must be the ghost miners picaxe!"
+    "text": "This must be the ghost miners pickaxe!"
   }
 }
