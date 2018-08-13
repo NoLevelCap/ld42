@@ -2,7 +2,7 @@
 
 "default.png":
 {
-	"frame": {"x":1,"y":1,"w":240,"h":240},
+	"frame": {"x":0,"y":0,"w":240,"h":240},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
@@ -10,19 +10,27 @@
 },
 "test3.png":
 {
-	"frame": {"x":243,"y":1,"w":240,"h":240},
+	"frame": {"x":240,"y":0,"w":240,"h":240},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
+	"sourceSize": {"w":240,"h":240}
+},
+"The Lodge.png":
+{
+	"frame": {"x":480,"y":0,"w":240,"h":240},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
 	"sourceSize": {"w":240,"h":240}
 }},
 "meta": {
-	"app": "http://www.codeandweb.com/texturepacker",
+	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "mapicons.png",
 	"format": "RGBA8888",
-	"size": {"w":484,"h":242},
+	"size": {"w":720,"h":240},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:2344dd4d4784fbe3d8e66b6a56a7d6cb:c01183da23f295cf826889dbb0646ef6:6fb9b835c6146c644ab0a50ec083f78f$"
+	"smartupdate": "$TexturePacker:SmartUpdate:706b97c94030a6b9243526a9dbc6290a:61ee011dada7f9e0df90220ddc28c352:6fb9b835c6146c644ab0a50ec083f78f$"
 }
 }

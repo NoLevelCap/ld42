@@ -26,6 +26,21 @@
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="10">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="11">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="12">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="25">
   <properties>
    <property name="solid" type="bool" value="true"/>
@@ -50,6 +65,16 @@
   <properties>
    <property name="shake" type="bool" value="true"/>
    <property name="torch" type="int" value="5"/>
+  </properties>
+ </tile>
+ <tile id="30">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="32">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
  <tile id="44">
@@ -78,6 +103,21 @@
   </properties>
  </tile>
  <tile id="49">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="50">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="51">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="52">
   <properties>
    <property name="solid" type="bool" value="true"/>
   </properties>
@@ -247,6 +287,11 @@
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="129">
+  <properties>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="142">
   <properties>
    <property name="colour" value="red"/>
@@ -333,6 +378,11 @@
    <property name="solid" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="168">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="180">
   <properties>
    <property name="toFloor" value=""/>
@@ -367,6 +417,44 @@
   <properties>
    <property name="shake" type="bool" value="true"/>
    <property name="type" value="grave"/>
+  </properties>
+ </tile>
+ <tile id="187">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
+   <property name="solid" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="203">
+  <properties>
+   <property name="colour" value="blue"/>
+   <property name="solid" type="bool" value="true"/>
+   <property name="type" value="door"/>
+  </properties>
+ </tile>
+ <tile id="204">
+  <properties>
+   <property name="colour" value="red"/>
+   <property name="solid" type="bool" value="true"/>
+   <property name="type" value="door"/>
+  </properties>
+ </tile>
+ <tile id="205">
+  <properties>
+   <property name="colour" value="green"/>
+   <property name="solid" type="bool" value="true"/>
+   <property name="type" value="door"/>
+  </properties>
+ </tile>
+ <tile id="206">
+  <properties>
+   <property name="item" type="bool" value="true"/>
+   <property name="name" value="picaxe"/>
+  </properties>
+ </tile>
+ <tile id="223">
+  <properties>
+   <property name="shake" type="bool" value="true"/>
   </properties>
  </tile>
 </tileset>

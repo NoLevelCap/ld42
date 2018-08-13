@@ -1,3 +1,4 @@
 var LEVELS_INMENU = [
-  "The Lodge"
+  "The Lodge",
+  "The Mine"
 ]
