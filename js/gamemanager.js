@@ -31,7 +31,7 @@ function gamemanager() {
 //    _this.gameContainer.pivot.y = 720 * 0.25;
 //    _this.gameContainer.scale.x = _this.gameContainer.scale.y = 2.0;
 
-    _this.cameraTimer = 20;
+    _this.cameraTimer = 80;
 
     _this.overlay = new overlay();
     _this.uiContainer.addChild(_this.overlay);
@@ -136,7 +136,8 @@ function gamemanager() {
     }
 
     SOUNDMANAGER.addSound("example", ["G0001"]);
-    SOUNDMANAGER.getSound("example").play();
+    SOUNDMANAGER.addSound("pickup", ["G0002"]);
+    SOUNDMANAGER.addSound("openDoor", ["G0003"]);
   }
 
   this.levelselect = function(){
@@ -153,6 +154,9 @@ function gamemanager() {
     _this.levelSelectUI.destroy({children: true});
   }
 
+  this.endLevel = function() {
+    _this.levelselectinit();
+  }
 
   Container.call( this );
   this.init();

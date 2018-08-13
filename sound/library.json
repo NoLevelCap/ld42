@@ -4,5 +4,17 @@
     "name": "Initial",
     "filepath": "general/example.mp3",
     "text": "I dunno"
+  },
+  "G0002": {
+    "id": "G0002",
+    "name": "pickup",
+    "filepath": "general/pickup1.mp3",
+    "text": ""
+  },
+  "G0003": {
+    "id": "G0003",
+    "name": "openDoor",
+    "filepath": "general/openDoor1.mp3",
+    "text": ""
   }
 }
