@@ -358,14 +358,6 @@
                          "height":32,
                          "id":36,
                          "name":"",
-                         "properties":
-                            {
-                             "torch":10
-                            },
-                         "propertytypes":
-                            {
-                             "torch":"int"
-                            },
                          "rotation":0,
                          "type":"",
                          "visible":true,
@@ -1312,13 +1304,15 @@
                          "properties":
                             {
                              "active":true,
+                             "interactable":true,
                              "queueText":"HELLO",
-                             "singular":true,
-                             "type":"interactive"
+                             "singular":false,
+                             "type":"queueText"
                             },
                          "propertytypes":
                             {
                              "active":"bool",
+                             "interactable":"bool",
                              "queueText":"string",
                              "singular":"bool",
                              "type":"string"
@@ -1753,11 +1747,13 @@
                          "name":"",
                          "properties":
                             {
+                             "interactable":true,
                              "spawnid":182,
                              "type":"ghostTrigger"
                             },
                          "propertytypes":
                             {
+                             "interactable":"bool",
                              "spawnid":"int",
                              "type":"string"
                             },
@@ -1884,7 +1880,7 @@
          "name":"First Floor",
          "opacity":1,
          "type":"group",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
