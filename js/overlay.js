@@ -97,7 +97,6 @@ function overlay() {
         GAMEMANAGER.currentTime = tempSec;
         GAMEMANAGER.memoryText.text = GAMEMANAGER.cameraTimer + " MBs remaining";
         if (GAMEMANAGER.cameraTimer <= 0) {
-          GAMEMANAGER.setGameOver(true);
           GAMEMANAGER.overlay.switch();
         }
       }

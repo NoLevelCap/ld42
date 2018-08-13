@@ -85,6 +85,8 @@ function gamemanager() {
 
   this.setGameOver = function(val) {
     if (val) {
+      GAMEMANAGER.cameraTimer = 0;
+      GAMEMANAGER.overlay.switch();
       _this.gameoverSprite.visible = true;
       _this.gameoverText.visible = true;
       gameover = true;
