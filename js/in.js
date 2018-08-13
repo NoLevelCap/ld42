@@ -1,3 +1,6 @@
+/**/
+
+
 //Create a Pixi stage and renderer and add the
 //renderer.view to the DOM
 var stage = new Container(),
@@ -17,7 +20,6 @@ loader
 var Tex_Main, Map_Icons, state = failed, TRIGGERS;
 var SOUNDMANAGER, GAMEMANAGER;
 function setup() {
-
 
   //SOUNDMANAGER = new SoundManager();
 

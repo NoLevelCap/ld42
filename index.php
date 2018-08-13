@@ -27,6 +27,8 @@
   <script src="js/utils/shape.js"></script>
   <script src="js/utils/rectangle.js"></script>
 
+  <script src="js/filters/pixi-filters.js"></script>
+
   <script src="js/levelselect/levels.js"></script>
   <!--<script src="js/loader.js"></script>-->
 
