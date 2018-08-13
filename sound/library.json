@@ -40,5 +40,11 @@
     "name": "click",
     "filepath": "general/lightClick.mp3",
     "text": ""
+  },
+  "G0007": {
+    "id": "G0007",
+    "name": "stairs",
+    "filepath": "general/stairs1.mp3",
+    "text": ""
   }
 }
